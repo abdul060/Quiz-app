@@ -10,8 +10,13 @@
     --statsbackgroundcolor: #F6F6F6;
     --headingColor: #3B5BDB;
     --secondheadingColor: #D6336C;
+    --lightSecondHeadingColor: rgba(214, 51, 108, 0.1);
     --thirdheadingColor: #7048E8;
-    --textColor: #6B7080;
+    --textColor: rgba(107, 112, 128);
+    --buttonBackgroundColor: rgba(107, 112, 128 , 0.4);
+    --lightBlue: #EEF3FF;
+    --dividerLine: rgb(128, 128, 128 , 0.1);
+    --sectionSignature: #C2255C;
 }
 
 
@@ -125,5 +130,108 @@
         #leaderboardStat{
             color: var(--thirdheadingColor);
         }
+    }
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .TitleContainer{
+        width: 80%;
+        h1{
+            font-size: 24px;
+        }
+    }
+    .subseciton{
+        margin-top: 10px;
+        width: 80%;
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        .leftSideContent{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .iconBackground , .iconBackground2{
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                background-color: var(--lightBlue);
+            }
+            .iconBackground2{
+                background-color: var(--lightSecondHeadingColor);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 16px;
+                    color: var(--sectionSignature);
+                }
+            }
+            h3{
+                position: relative;
+                left: 10px;
+                font-size: 16px;
+            }
+        }
+        .rightSideContent{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            #buttonBackground , #buttonBackground2{
+                width: 47px;
+                height: 30px;
+                border-radius: 18px;
+                background-color: var(--headingColor);
+                border: none;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                cursor: pointer;
+                span{
+                    width: 22px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: var(--logofirstbackgroundcolor);
+                    border: none;
+                    position: relative;
+                    right: 2px;
+                }
+            }
+            #buttonBackground2{
+                display: flex;
+                justify-content: start;
+                background-color: var(--buttonBackgroundColor);
+                span{
+                    right: 0;
+                    left: 2px;
+                }
+            }
+        }
+    }
+    .dividerLine{
+        width: 80%;
+        height: 2px;
+        background-color: var(--dividerLine);
+    }
+    #LogOut{
+        position: relative;
+        top: 20px;
+        width: 80%;
+        height: 58px;
+        background-color: transparent;
+        border: var(--lightSecondHeadingColor) 3px solid;
+        border-radius: 17px;
+        font-size: 17px;
+        color: var(--sectionSignature);
+        font-weight: 700;
     }
 }
