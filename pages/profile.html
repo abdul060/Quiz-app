@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Quiz App profile: view your stats and manage your settings.">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Profile | Quiz App</title>
+</head>
+<body>
+    <header>
+        <div class="logocontainer">
+            <div class="logofirstbackground">
+                <div class="logosecondbackground">
+                    <span class="LogoSignature" aria-hidden="true">E</span>
+                </div>
+            </div>
+        </div>
+        <div class="YourNameContainer">
+            <h1>[Your name]</h1>
+        </div>
+        <div class="usernameContainer">
+            <p>@username <span aria-hidden="true"></span> Level 3</p>
+        </div>
+        <div class="statsContainer" role="group" aria-label="Your statistics">
+            <div class="statsChildren">
+                <strong>12</strong>
+                <p>Games played</p>
+            </div>
+            <div class="statsChildren">
+                <strong id="correctanswerStat">48</strong>
+                <p>Correct answers</p>
+            </div>
+            <div class="statsChildren">
+                <strong id="leaderboardStat">#5</strong>
+                <p>Leaderboard</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="TitleContainer">
+            <h2>Settings</h2>
+        </div>
+        <div class="subseciton">
+            <div class="leftSideContent">
+                <div class="iconBackground"><img src="/assets/pencile-icon.png" alt=""></div>
+                <strong>Edit profile</strong>
+            </div>
+        </div>
+        <hr class="dividerLine">
+        <div class="subseciton">
+            <div class="leftSideContent">
+                <div class="iconBackground2"><span aria-hidden="true">N</span></div>
+                <strong id="notificationsLabel">Notifications</strong>
+            </div>
+            <div class="rightSideContent">
+                <button id="buttonBackground" type="button" role="switch" aria-checked="true" aria-labelledby="notificationsLabel">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+        <hr class="dividerLine">
+        <div class="subseciton">
+            <div class="leftSideContent">
+                <div class="iconBackground2"><span aria-hidden="true">S</span></div>
+                <strong id="soundLabel">Sound effects</strong>
+            </div>
+            <div class="rightSideContent">
+                <button id="buttonBackground2" type="button" role="switch" aria-checked="false" aria-labelledby="soundLabel">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+        <hr class="dividerLine">
+        <button id="LogOut" type="button">Log out</button>
+    </main>
+</body>
+</html>

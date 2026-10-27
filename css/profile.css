@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --lineargradient: linear-gradient(to bottom ,#1C8FE0 , #3B5BDB);
+    --logofirstbackgroundcolor: #ffffff;
+    --logosecondbackgroundcolor: linear-gradient(to right , #D6336C , #E8590C);
+    --statsbackgroundcolor: #F6F6F6;
+    --headingColor: #3B5BDB;
+    --secondheadingColor: #D6336C;
+    --lightSecondHeadingColor: rgba(214, 51, 108, 0.1);
+    --thirdheadingColor: #7048E8;
+    --textColor: rgba(107, 112, 128);
+    --buttonBackgroundColor: rgba(107, 112, 128 , 0.4);
+    --lightBlue: #EEF3FF;
+    --dividerLine: rgb(128, 128, 128 , 0.1);
+    --sectionSignature: #C2255C;
+}
+
+
+header{
+    width: 100%;
+    height: 273px;
+    background: var(--lineargradient);
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logocontainer{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+    .logofirstbackground{
+        width: 104px;
+        height: 104px;
+        border-radius: 50%;
+        background-color: var(--logofirstbackgroundcolor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logosecondbackground{
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--logosecondbackgroundcolor);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .LogoSignature{
+                font-size: 48px;
+                font-weight: bold;
+                color: var(--logofirstbackgroundcolor);
+            }
+        }
+    }
+}
+
+.YourNameContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 25px;
+    h1{
+        font-size: 42px;
+        color: var(--logofirstbackgroundcolor);
+    }
+}
+
+.usernameContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 25px;
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--logofirstbackgroundcolor);
+        span{
+            width: 4px;
+            height: 4px;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-color: var(--logofirstbackgroundcolor);
+            border-radius: 27px;
+        }
+    }
+}
+
+.statsContainer{
+    width: 337px;
+    height: 73px;
+    background-color: var(--statsbackgroundcolor);
+    border-radius: 18px;
+    position: relative;
+    top: 50px;
+    box-shadow: 0 2px 50px rgba(0, 0, 0, 0.25);
+    display: flex;
+    .statsChildren{
+        width: 33%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        strong{
+            font-size: 24px;
+            color: var(--headingColor);
+        }
+        p{
+            font-size: 13px;
+            color: var(--textColor);
+        }
+        #correctanswerStat{
+            color: var(--secondheadingColor);
+        }
+        #leaderboardStat{
+            color: var(--thirdheadingColor);
+        }
+    }
+}
+
+main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .TitleContainer{
+        width: 80%;
+        h2{
+            font-size: 24px;
+        }
+    }
+    .subseciton{
+        margin-top: 10px;
+        width: 80%;
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        .leftSideContent{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .iconBackground , .iconBackground2{
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                background-color: var(--lightBlue);
+            }
+            .iconBackground{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .iconBackground2{
+                background-color: var(--lightSecondHeadingColor);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 16px;
+                    color: var(--sectionSignature);
+                }
+            }
+            strong{
+                position: relative;
+                left: 10px;
+                font-size: 16px;
+            }
+        }
+        .rightSideContent{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            #buttonBackground , #buttonBackground2{
+                width: 47px;
+                height: 30px;
+                border-radius: 18px;
+                background-color: var(--headingColor);
+                border: none;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                cursor: pointer;
+                span{
+                    width: 22px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: var(--logofirstbackgroundcolor);
+                    border: none;
+                    position: relative;
+                    right: 2px;
+                }
+            }
+            #buttonBackground2{
+                display: flex;
+                justify-content: start;
+                background-color: var(--buttonBackgroundColor);
+                span{
+                    right: 0;
+                    left: 2px;
+                }
+            }
+        }
+    }
+    .dividerLine{
+        width: 80%;
+        height: 2px;
+        background-color: var(--dividerLine);
+        border: none;
+    }
+    #LogOut{
+        position: relative;
+        top: 20px;
+        width: 80%;
+        height: 58px;
+        background-color: transparent;
+        border: var(--lightSecondHeadingColor) 3px solid;
+        border-radius: 17px;
+        font-size: 17px;
+        color: var(--sectionSignature);
+        font-weight: 700;
+    }
+}
