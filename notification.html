@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - Notification</title>
+
+    <!-- Typsnittet Poppins från Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/notification.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="header">
+        <div>
+          <h1 class="header__title">Let's play</h1>
+          <p class="header__subtitle">Pick a topic of your specialty</p>
+        </div>
+
+        <a href="notification.html" class="bell-btn">
+          <img src="bell.png" alt="Notifications" />
+        </a>
+      </header>
+
+      <main class="topics">
+        <button class="topic-card topic-card--capital" data-topic="capitals">
+          <span class="topic-card__play" aria-hidden="true"></span>
+          <span class="topic-card__info">Topic 1 · 5 Questions</span>
+          <span class="topic-card__name">Capital</span>
+          <span class="topic-card__icon"><img src="globe.png" alt="" /></span>
+        </button>
+
+        <button class="topic-card topic-card--artists" data-topic="artists">
+          <span class="topic-card__play" aria-hidden="true"></span>
+          <span class="topic-card__info">Topic 2 · 5 Questions</span>
+          <span class="topic-card__name">Artists</span>
+          <span class="topic-card__icon"
+            ><img src="microphone.png" alt=""
+          /></span>
+        </button>
+
+        <button class="topic-card topic-card--sport" data-topic="sports">
+          <span class="topic-card__play" aria-hidden="true"></span>
+          <span class="topic-card__info">Topic 3 · 5 Questions</span>
+          <span class="topic-card__name">Sport</span>
+          <span class="topic-card__icon"><img src="ball.png" alt="" /></span>
+        </button>
+      </main>
+      <!-- Nav-->
+       
+      <!-- Pop-up -->
+      <div class="modal-overlay">
+        <div class="modal" role="dialog" aria-labelledby="modal-title">
+          <div class="modal__badge-icon" aria-hidden="true">
+            <img src="bell.png" alt="" />
+          </div>
+
+          <span class="modal__label">New challenge</span>
+
+          <h2 class="modal__title" id="modal-title">Maya beat your score!</h2>
+          <p class="modal__text">
+            She got 5/5 in Capitals. Can you take back your spot on the
+            leaderboard?
+          </p>
+
+          <a href="questions.html" class="modal__play" id="play-now-btn"
+            >Play now</a
+          >
+          <a href="home.html" class="modal__later">Maybe later</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+  </body>
+</html>
