@@ -31,6 +31,9 @@ header{
     align-items: center;
     justify-content: center;
 }
+body{
+    font-family: "Inter", sans-serif;
+}
 
 .logocontainer{
     width: 100%;
