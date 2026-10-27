@@ -75,7 +75,7 @@ body{
     position: relative;
     top: 25px;
     h1{
-        font-size: 42px;
+        font-size: 32px;
         color: var(--logofirstbackgroundcolor);
     }
 }
