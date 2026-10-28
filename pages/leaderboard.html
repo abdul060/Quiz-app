@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/leaderboard.css">
+    <title>Leaderboard - Quiz App</title>
+</head>
+<body>
+    <main class="leaderboard">
+
+        <header class="leaderboard_header">
+            <h1 class="leaderboard_title">Leaderboard</h1>
+            <p class="leaderboard_subtitle">Top players this week</p>
+        </header>
+
+        <nav class="tabs" aria-label="Scores">
+            <a href="scoreboard.html" class="tabs_btn">My scores</a>
+            <a href="leaderboard.html" class="tabs_btn tabs_btn-active" aria-current="page">Leaderboard</a>
+        </nav>
+
+        <div class="leaderboard_content">
+            <section class="podium" aria-labelledby="podium-title">
+                <h2 id="podium-title" class="visually-hidden">Top 3 players</h2>
+                <ol class="podium_list">
+                    <li class="podium_item podium_item-second">
+                        <span class="podium_avatar">S</span>
+                        <span class="podium_name">Sam</span>
+                        <div class="podium_block">
+                            <span class="podium_rank">2</span>
+                            <span class="podium_points">42 pts</span>
+                        </div>
+                    </li>
+                    <li class="podium_item podium_item-first">
+                        <span class="podium_crown" aria-hidden="true">&#9819;</span>
+                        <span class="podium_avatar">M</span>
+                        <span class="podium_name">Maya</span>
+                        <div class="podium_block">
+                            <span class="podium_rank">1</span>
+                            <span class="podium_points">48 pts</span>
+                        </div>
+                    </li>
+                    <li class="podium_item podium_item-third">
+                        <span class="podium_avatar">L</span>
+                        <span class="podium_name">Lisa</span>
+                        <div class="podium_block">
+                            <span class="podium_rank">3</span>
+                            <span class="podium_points">39 pts</span>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section aria-labelledby="players-title">
+                <h2 id="players-title" class="visually-hidden">Other players</h2>
+                <ol class="player_list" start="4">
+                    <li class="player_item">
+                        <span class="player-item_rank">4</span>
+                        <span class="player-item_avatar player-item_avatar-blue">N</span>
+                        <span class="player-item_name">Noah</span>
+                        <span class="player-item_points">30 pts</span>
+                    </li>
+                    <li class="player_item player_item-me">
+                        <span class="player-item_rank">5</span>
+                        <span class="player-item_avatar player-item_avatar-pink">Y</span>
+                        <span class="player-item_name">You</span>
+                        <span class="player-item_points">28 pts</span>
+                    </li>
+                    <li class="player_item">
+                        <span class="player-item_rank">6</span>
+                        <span class="player-item_avatar player-item_avatar-purple">E</span>
+                        <span class="player-item_name">Ella</span>
+                        <span class="player-item_points">25 pts</span>
+                    </li>
+                    <li class="player_item">
+                        <span class="player-item_rank">7</span>
+                        <span class="player-item_avatar player-item_avatar-blue">O</span>
+                        <span class="player-item_name">Omar</span>
+                        <span class="player-item_points">22 pts</span>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+
+
+
+<!-- // this code for footer dont tocuh /Abdul // -->
+        <footer class="footer">
+        <nav class="footer_nav">
+            <ul class="footer_list">
+
+                <li>
+                    <a href="home.html">
+                        <img src="/assets/footer-home-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="scoreboard.html">
+                        <img src="/assets/footer-leaderboard-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Scoreboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <img src="/assets/footer-profile-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Profile</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </footer>
+<!-- // this code for footer dont tocuh /Abdul // -->
+
+</body>
+</html>
