@@ -205,6 +205,9 @@ main{
                 justify-content: flex-end;
                 align-items: center;
                 cursor: pointer;
+                &.activated{
+                    background-color: var(--buttonBackgroundColor);
+                    }
                 span{
                     width: 22px;
                     height: 24px;
@@ -213,15 +216,31 @@ main{
                     border: none;
                     position: relative;
                     right: 2px;
+                    transition: 0.3s ease;
+                    &.activated{
+                    transform: translateX(0px);
+                    }
+                    &.disabled{
+                    transform: translateX(-21px);
+                    }
                 }
             }
             #buttonBackground2{
                 display: flex;
                 justify-content: start;
                 background-color: var(--buttonBackgroundColor);
+                &.activated{
+                    background-color: var(--headingColor);
+                }
                 span{
                     right: 0;
                     left: 2px;
+                    &.activated{
+                    transform: translateX(0px);
+                    }
+                    &.disabled{
+                    transform: translateX(21px);
+                    }
                 }
             }
         }
@@ -243,7 +262,15 @@ main{
         font-size: 17px;
         color: var(--sectionSignature);
         font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s ease;
     }
+    #LogOut:hover{
+        background-color: var(--lightSecondHeadingColor);
+        color: var(--logofirstbackgroundcolor);
+        border: none;
+    }
+
 }
 
 
