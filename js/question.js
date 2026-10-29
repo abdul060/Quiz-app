@@ -1,29 +1,52 @@
 const questionImage = document.getElementById("question-image");
 const photoAuthor = document.getElementById("photo-author");
 const photoLicense = document.getElementById("photo-license");
+const questionCategory = document.getElementById("question-category");
 const questionTitle = document.getElementById("question-title");
 const answerList = document.getElementById("answer-list");
+const questionNumber = document.getElementById("question-number");
+const questionProgress = document.getElementById("question-progress");
+const progressCircle = document.querySelector(".progress-value");
 const quizScore = document.getElementById("quiz-score");
 const quizTime = document.getElementById("quiz-time");
 const feedback = document.getElementById("answer-feedback");
 const timePopup = document.getElementById("time-popup");
 const playAgainButton = document.getElementById("play-again-button");
 
+const CIRCLE_LENGTH = 150.8;
+
+let topic = "";
+let questions = [];
+let currentIndex = 0;
+let question = null;
 let score = 0;
 let hasAnswered = false;
-let question = null;
+let quizOver = false;
 let timeLeft = 120;
 let timerId = null;
 
-async function loadQuestion() {
+async function loadQuiz() {
   const response = await fetch("/json/question.json");
   const data = await response.json();
-  question = data.questions[0];
+  topic = data.topic;
+  questions = data.questions;
   showQuestion();
   startTimer();
 }
 
 function showQuestion() {
+  question = questions[currentIndex];
+  hasAnswered = false;
+  feedback.textContent = "";
+
+  const number = currentIndex + 1;
+  const total = questions.length;
+
+  questionNumber.textContent = number;
+  questionCategory.textContent = topic + " · Question " + number + " of " + total;
+  questionProgress.setAttribute("aria-label", "Question " + number + " of " + total);
+  progressCircle.style.strokeDasharray = (number / total) * CIRCLE_LENGTH + " " + CIRCLE_LENGTH;
+
   questionImage.src = question.image.src;
   questionImage.alt = question.image.alt;
   photoAuthor.textContent = question.image.author;
@@ -79,27 +102,22 @@ function findCorrectButton() {
 }
 
 function timeIsUp() {
-  if (hasAnswered) {
+  if (quizOver) {
     return;
   }
-  hasAnswered = true;
+  quizOver = true;
   clearInterval(timerId);
   lockButtons();
-
-  const correctButton = findCorrectButton();
-  correctButton.classList.add("answer-button--correct");
-  feedback.textContent = "Time is up! The right answer is " + correctButton.textContent + ".";
 
   timePopup.hidden = false;
   playAgainButton.focus();
 }
 
 function checkAnswer(clickedButton) {
-  if (hasAnswered) {
+  if (hasAnswered || quizOver) {
     return;
   }
   hasAnswered = true;
-  clearInterval(timerId);
   lockButtons();
 
   if (clickedButton.dataset.answerId === question.correctAnswerId) {
@@ -113,10 +131,27 @@ function checkAnswer(clickedButton) {
     correctButton.classList.add("answer-button--correct");
     feedback.textContent = "Not quite. The right answer is " + correctButton.textContent + ".";
   }
+
+  setTimeout(goToNextQuestion, 2000);
+}
+
+function goToNextQuestion() {
+  if (quizOver) {
+    return;
+  }
+
+  if (currentIndex < questions.length - 1) {
+    currentIndex = currentIndex + 1;
+    showQuestion();
+  } else {
+    quizOver = true;
+    clearInterval(timerId);
+    location.href = "scoreboard.html";
+  }
 }
 
 playAgainButton.addEventListener("click", function () {
   location.reload();
 });
 
-loadQuestion();
+loadQuiz();
