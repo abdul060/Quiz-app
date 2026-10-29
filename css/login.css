@@ -127,6 +127,10 @@ body{
         width: 80%;
         border: none;
         background: transparent;
+         &:focus{
+        outline: 1px solid var(--headingColor);
+        outline-offset: 2px;
+        }
     }
     }
     button{
@@ -138,6 +142,7 @@ body{
         color: var(--statsbackgroundcolor);
         font-size: 18px;
         margin-top: 10px;
+        cursor: pointer;
     }
 }
 
