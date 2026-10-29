@@ -1,0 +1,96 @@
+/* Popup */
+/* the colors for (var(--...)) are in :root in the home.css file*/
+
+/* The grey on the page */
+
+.modal-overlay {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    background: var(--white);
+    border-radius: 28px;
+    padding: 80px 24px 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Red circle behind the bell */
+.modal__badge-icon {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d6336c, #e8590c);
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(214, 51, 108, 0.3);
+}
+
+/* Size */
+
+.modal__badge-icon img {
+    width: 52px;
+    height: 52px;
+}
+
+.modal__label {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 2px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pink);
+    background: #fde4ec;
+    border-radius: 999px;
+}
+
+.modal__title {
+    color: var(--text-dark);
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.modal__text {
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.modal__play {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    background: linear-gradient(135deg, #3b5bdb, #1c9fe0);
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.modal__later {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #3b5bdb;
+    padding: 6px;
+}

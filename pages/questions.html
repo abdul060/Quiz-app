@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Test your knowledge of capitals, sports and artists in our quiz.">
+    <title>Capitals - Quiz</title>
+    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
+    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/questions.css">
+  </head>
+  <body class="question-page">
+    <a class="skip-link" href="#question-title">Skip to question</a>
+    <div class="quiz-shell">
+      <header class="quiz-header" aria-label="Quiz status">
+        <a class="quit-link" href="home.html" aria-label="Quit quiz and return home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+        </a>
+        <div class="question-progress" role="img" aria-label="Question 1 of 5" id="question-progress">
+          <svg viewBox="0 0 56 56" aria-hidden="true">
+            <circle class="progress-track" cx="28" cy="28" r="24"/>
+            <circle class="progress-value" cx="28" cy="28" r="24"/>
+          </svg>
+          <span aria-hidden="true"><span id="question-number">1</span>/5</span>
+        </div>
+        <p class="score-pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2L5.8 21 7 14.2 2 9.3l6.9-1Z"/></svg>
+          <span class="visually-hidden">Score: </span><span id="quiz-score">0</span>
+        </p>
+      </header>
+      <main class="quiz-main">
+        <figure class="question-picture" id="question-picture">
+          <img id="question-image" src="../assets/questions/stockholm.jpg"
+            alt="A waterfront lined with pastel-coloured historic buildings and steep red roofs."
+            width="960" height="640" fetchpriority="high">
+          <figcaption>
+            Photo: <a id="photo-author" href="https://commons.wikimedia.org/wiki/User:OleNeitzel">OleNeitzel</a>
+            · <a id="photo-license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+          </figcaption>
+        </figure>
+        <section class="question-content" aria-labelledby="question-title">
+          <div class="question-details">
+            <p class="question-category" id="question-category">Capitals · Question 1 of 5</p>
+            <p class="quiz-time"><span>Time limit</span> <time id="quiz-time" datetime="PT2M">02:00</time></p>
+          </div>
+          <h1 id="question-title" tabindex="-1">Which capital city is this?</h1>
+          <div class="answer-list" id="answer-list" role="group" aria-labelledby="question-title">
+            <button class="answer-button" type="button" data-answer-id="stockholm">Stockholm</button>
+            <button class="answer-button" type="button" data-answer-id="copenhagen">Copenhagen</button>
+            <button class="answer-button" type="button" data-answer-id="oslo">Oslo</button>
+          </div>
+          <p class="answer-feedback" id="answer-feedback" role="status"></p>
+        </section>
+      </main>
+      <footer class="quiz-footer">
+        <nav aria-label="Main navigation">
+          <ul class="quiz-nav-list">
+            <li><a href="home.html"><img src="../assets/footer-home-icon.png" alt="" width="28" height="28"><span>Home</span></a></li>
+            <li><a href="scoreboard.html"><img src="../assets/footer-leaderboard-icon.png" alt="" width="28" height="28"><span>Scoreboard</span></a></li>
+            <li><a href="profile.html"><img src="../assets/footer-profile-icon.png" alt="" width="28" height="28"><span>Profile</span></a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+    <div class="time-popup" id="time-popup" hidden>
+      <div class="time-popup__box" role="alertdialog" aria-modal="true" aria-labelledby="time-popup-title" aria-describedby="time-popup-text">
+        <h2 id="time-popup-title">Time is up!</h2>
+        <p id="time-popup-text">You didn't answer in time.</p>
+        <button type="button" class="time-popup__button" id="play-again-button">Play again</button>
+      </div>
+    </div>
+    <p class="preview-note"><a href="question-credits.html">Photo credits</a></p>
+    <script src="../js/question.js" defer></script>
+  </body>
+</html>

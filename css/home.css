@@ -1,0 +1,220 @@
+/* Grunden*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #d6336c;
+    --text-dark: #1b1d2a;
+    --text-grey: #6b7080;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f2f2f2;
+    color: var(--text-dark);
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+/* mobile */
+.app {
+    position: relative;
+    max-width: 390px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 60px 24px 120px;
+    overflow: hidden;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.header__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--pink);
+    line-height: 1.2;
+}
+
+.header__subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-grey);
+    margin-top: 6px;
+}
+
+.bell-btn {
+    padding-top: 8px;
+}
+
+.bell-btn img {
+    display: block;
+    width: 32px;
+    height: auto;
+}
+
+/* Cards */
+
+.topics {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.topic-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 115px;
+    padding: 16px 20px;
+    border-radius: 24px;
+    color: var(--white);
+    text-align: left;
+    transition: transform 0.15s;
+}
+
+.topic-card:hover {
+    transform: scale(1.02);
+}
+
+/* Colors for card */
+
+.topic-card--capital {
+    background: linear-gradient(135deg, #d6336c, #e8590c);
+}
+
+.topic-card--artists {
+    background: linear-gradient(135deg, #3b5bdb, #1c9fe0);
+}
+
+.topic-card--sport {
+    background: linear-gradient(135deg, #7048e8, #c2255c);
+}
+
+/* Play */
+
+.topic-card__play {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    width: 34px;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.topic-card__play::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 7px 0 7px 11px;
+    border-color: transparent transparent transparent var(--white);
+}
+
+.topic-card__info {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.topic-card__name {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* Vit cirkel med ikon */
+
+.topic-card__icon {
+    position: absolute;
+    top: -32px;
+    right: -8px;
+    width: 88px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Storlek på bild i den vita cirkeln */
+.topic-card__icon img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+
+/* this code is for footer dont touch /Abdul */
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+}
+.footer_nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 26px 26px 0 0;
+    box-shadow: 0 -6px 20px rgba(27, 29, 42, 0.06);
+}
+.footer_list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 16px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.footer_list li{
+    list-style: none;
+}
+.footer_list a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 4px;
+}
+.footer_span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #6B7080;
+    font-family: var(--main-font);
+}
+/* this code is for footer dont touch /Abdul */

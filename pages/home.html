@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - Home</title>
+
+    <!-- Typsnittet Poppins -->
+
+    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"/>
+
+    <link rel="stylesheet" href="../css/home.css">
+  </head>
+  <body>
+    <div class="app">
+      <!-- HEADER-->
+      <header class="header">
+        <div>
+          <h1 class="header__title">Let's play</h1>
+          <p class="header__subtitle">Pick a topic of your specialty</p>
+        </div>
+
+        <a href="notification.html" class="bell-btn">
+          <img src="bell.png" alt="Notifications" />
+        </a>
+      </header>
+
+      <main class="topics">
+        <a href="questions.html"><button class="topic-card topic-card--capital" data-topic="capitals">
+          <span class="topic-card__play" aria-hidden="true"></span>
+          <span class="topic-card__info">Topic 1 · 5 Questions</span>
+          <span class="topic-card__name">Capital</span>
+          <span class="topic-card__icon"><img src="globe.png" alt="" /></span>
+        </button></a>
+
+        <button class="topic-card topic-card--artists" data-topic="artists">
+          <span class="topic-card__play" aria-hidden="true"></span>
+          <span class="topic-card__info">Topic 2 · 5 Questions</span>
+          <span class="topic-card__name">Artists</span>
+          <span class="topic-card__icon"
+            ><img src="microphone.png" alt=""
+          /></span>
+        </button>
+
+        <button class="topic-card topic-card--sport" data-topic="sports">
+          <span class="topic-card__play" aria-hidden="true"></span>
+          <span class="topic-card__info">Topic 3 · 5 Questions</span>
+          <span class="topic-card__name">Sport</span>
+          <span class="topic-card__icon"><img src="ball.png" alt="" /></span>
+        </button>
+      </main>
+
+      <!-- Nav-->
+
+
+
+
+      <!-- // this code for footer dont tocuh /Abdul // -->
+    <footer class="footer">
+        <nav class="footer_nav">
+            <ul class="footer_list">
+
+                <li>
+                    <a href="home.html">
+                        <img src="/assets/footer-home-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="scoreboard.html">
+                        <img src="/assets/footer-leaderboard-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Scoreboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <img src="/assets/footer-profile-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Profile</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </footer>
+<!-- // this code for footer dont tocuh /Abdul // -->
+    </div>
+  </body>
+</html>
