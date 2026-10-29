@@ -23,8 +23,12 @@ button {
     font-family: inherit;
     border: none;
     cursor: pointer;
+    width: 100%;
 }
 
+a{
+    text-decoration: none;
+}
 /* mobile */
 .app {
     position: relative;
