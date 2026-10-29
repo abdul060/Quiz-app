@@ -10,13 +10,11 @@
   </head>
   <body class="question-page">
     <a class="skip-link" href="#question-title">Skip to question</a>
-
     <div class="quiz-shell">
       <header class="quiz-header" aria-label="Quiz status">
         <a class="quit-link" href="home.html" aria-label="Quit quiz and return home">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
         </a>
-
         <div class="question-progress" role="img" aria-label="Question 1 of 5" id="question-progress">
           <svg viewBox="0 0 56 56" aria-hidden="true">
             <circle class="progress-track" cx="28" cy="28" r="24"/>
@@ -24,13 +22,11 @@
           </svg>
           <span aria-hidden="true"><span id="question-number">1</span>/5</span>
         </div>
-
         <p class="score-pill">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2L5.8 21 7 14.2 2 9.3l6.9-1Z"/></svg>
           <span class="visually-hidden">Score: </span><span id="quiz-score">0</span>
         </p>
       </header>
-
       <main class="quiz-main">
         <figure class="question-picture" id="question-picture">
           <img id="question-image" src="../assets/questions/stockholm.jpg"
@@ -41,15 +37,12 @@
             · <a id="photo-license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
           </figcaption>
         </figure>
-
         <section class="question-content" aria-labelledby="question-title">
           <div class="question-details">
             <p class="question-category" id="question-category">Capitals · Question 1 of 5</p>
             <p class="quiz-time"><span>Time limit</span> <time id="quiz-time" datetime="PT2M">02:00</time></p>
           </div>
           <h1 id="question-title" tabindex="-1">Which capital city is this?</h1>
-
-          <!-- JavaScript will connect these native buttons to the question data. -->
           <div class="answer-list" id="answer-list" role="group" aria-labelledby="question-title">
             <button class="answer-button" type="button" data-answer-id="stockholm">Stockholm</button>
             <button class="answer-button" type="button" data-answer-id="copenhagen">Copenhagen</button>
@@ -57,7 +50,6 @@
           </div>
         </section>
       </main>
-
       <footer class="quiz-footer">
         <nav aria-label="Main navigation">
           <ul class="quiz-nav-list">
@@ -68,7 +60,6 @@
         </nav>
       </footer>
     </div>
-
     <p class="preview-note">Design preview: answers and the timer are not active yet. <a href="question-credits.html">Photo credits</a></p>
   </body>
 </html>
