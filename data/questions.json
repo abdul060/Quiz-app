@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    { "id": "capitals", "name": "Capitals", "difficulty": "easy" },
+    { "id": "sports", "name": "Sports", "difficulty": "medium" },
+    { "id": "artists", "name": "Artists", "difficulty": "hard" }
+  ],
+  "questions": [
+    {
+      "id": "capitals-01",
+      "category": "capitals",
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/stockholm.jpg",
+        "alt": "A waterfront lined with pastel-coloured historic buildings and steep red roofs.",
+        "author": "OleNeitzel",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:OleNeitzel",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nygr%C3%A4nd,_Brunnsgr%C3%A4nd,_Skeppsbron_seen_from_Str%C3%B6mmen,_Stockholm.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "answers": [
+        { "id": "stockholm", "text": "Stockholm" },
+        { "id": "copenhagen", "text": "Copenhagen" },
+        { "id": "oslo", "text": "Oslo" }
+      ],
+      "correctAnswerId": "stockholm"
+    },
+    {
+      "id": "capitals-02",
+      "category": "capitals",
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/amsterdam.jpg",
+        "alt": "A canal bordered by tall, narrow brick houses with gabled roofs.",
+        "author": "Kaci Baum",
+        "authorUrl": "https://unsplash.com/@kacibaum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Canal_Houses_(Unsplash).jpg",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "answers": [
+        { "id": "amsterdam", "text": "Amsterdam" },
+        { "id": "copenhagen", "text": "Copenhagen" },
+        { "id": "brussels", "text": "Brussels" }
+      ],
+      "correctAnswerId": "amsterdam"
+    },
+    {
+      "id": "capitals-03",
+      "category": "capitals",
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/london.jpg",
+        "alt": "A Gothic parliament building and a tall clock tower beside a river and a bridge.",
+        "author": "Arpingstone",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:Arpingstone",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palace.of.westminster.arp.jpg",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Palace.of.westminster.arp.jpg#Licensing"
+      },
+      "answers": [
+        { "id": "london", "text": "London" },
+        { "id": "dublin", "text": "Dublin" },
+        { "id": "brussels", "text": "Brussels" }
+      ],
+      "correctAnswerId": "london"
+    },
+    {
+      "id": "capitals-04",
+      "category": "capitals",
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/rome.jpg",
+        "alt": "An ancient oval stone amphitheatre with several tiers of open arches.",
+        "author": "maiterozas",
+        "authorUrl": "https://pixabay.com/users/maiterozas-3811814/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colosseum_romanum.jpg",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "answers": [
+        { "id": "rome", "text": "Rome" },
+        { "id": "athens", "text": "Athens" },
+        { "id": "madrid", "text": "Madrid" }
+      ],
+      "correctAnswerId": "rome"
+    },
+    {
+      "id": "capitals-05",
+      "category": "capitals",
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/berlin.jpg",
+        "alt": "An illuminated neoclassical gate with six columns and a horse-drawn chariot sculpture on top.",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "authorUrl": "https://www.foto-tw.de/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brandenburger_Tor_abends.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "answers": [
+        { "id": "berlin", "text": "Berlin" },
+        { "id": "vienna", "text": "Vienna" },
+        { "id": "prague", "text": "Prague" }
+      ],
+      "correctAnswerId": "berlin"
+    },
+    {
+      "id": "sports-01",
+      "category": "sports",
+      "question": "How many players does each team have on the field in football (soccer)?",
+      "image": null,
+      "answers": [
+        { "id": "eleven", "text": "11" },
+        { "id": "ten", "text": "10" },
+        { "id": "twelve", "text": "12" }
+      ],
+      "correctAnswerId": "eleven"
+    },
+    {
+      "id": "sports-02",
+      "category": "sports",
+      "question": "How many rings are on the Olympic flag?",
+      "image": null,
+      "answers": [
+        { "id": "five", "text": "5" },
+        { "id": "four", "text": "4" },
+        { "id": "six", "text": "6" }
+      ],
+      "correctAnswerId": "five"
+    },
+    {
+      "id": "sports-03",
+      "category": "sports",
+      "question": "How many points is a touchdown worth in American football?",
+      "image": null,
+      "answers": [
+        { "id": "six", "text": "6" },
+        { "id": "three", "text": "3" },
+        { "id": "seven", "text": "7" }
+      ],
+      "correctAnswerId": "six"
+    },
+    {
+      "id": "sports-04",
+      "category": "sports",
+      "question": "How long is a marathon?",
+      "image": null,
+      "answers": [
+        { "id": "full-distance", "text": "42.195 km" },
+        { "id": "forty", "text": "40 km" },
+        { "id": "forty-five", "text": "45 km" }
+      ],
+      "correctAnswerId": "full-distance"
+    },
+    {
+      "id": "sports-05",
+      "category": "sports",
+      "question": "Which Swedish tennis player won Wimbledon five years in a row (1976–1980)?",
+      "image": null,
+      "answers": [
+        { "id": "borg", "text": "Björn Borg" },
+        { "id": "edberg", "text": "Stefan Edberg" },
+        { "id": "wilander", "text": "Mats Wilander" }
+      ],
+      "correctAnswerId": "borg"
+    },
+    {
+      "id": "artists-01",
+      "category": "artists",
+      "question": "What was Prince’s full name?",
+      "image": null,
+      "answers": [
+        { "id": "rogers", "text": "Prince Rogers Nelson" },
+        { "id": "roger", "text": "Prince Roger Nelson" },
+        { "id": "robert", "text": "Prince Robert Nelson" }
+      ],
+      "correctAnswerId": "rogers"
+    },
+    {
+      "id": "artists-02",
+      "category": "artists",
+      "question": "What was Avicii’s real name?",
+      "image": null,
+      "answers": [
+        { "id": "bergling", "text": "Tim Bergling" },
+        { "id": "berglund", "text": "Tim Berglund" },
+        { "id": "bergman", "text": "Tom Bergman" }
+      ],
+      "correctAnswerId": "bergling"
+    },
+    {
+      "id": "artists-03",
+      "category": "artists",
+      "question": "Which Swedish songwriter wrote Britney Spears’ “…Baby One More Time”?",
+      "image": null,
+      "answers": [
+        { "id": "max-martin", "text": "Max Martin" },
+        { "id": "shellback", "text": "Shellback" },
+        { "id": "redone", "text": "RedOne" }
+      ],
+      "correctAnswerId": "max-martin"
+    },
+    {
+      "id": "artists-04",
+      "category": "artists",
+      "question": "In which year was Michael Jackson’s album “Thriller” released?",
+      "image": null,
+      "answers": [
+        { "id": "year-1982", "text": "1982" },
+        { "id": "year-1979", "text": "1979" },
+        { "id": "year-1984", "text": "1984" }
+      ],
+      "correctAnswerId": "year-1982"
+    },
+    {
+      "id": "artists-05",
+      "category": "artists",
+      "question": "Which band’s debut album was called “Pablo Honey”?",
+      "image": null,
+      "answers": [
+        { "id": "radiohead", "text": "Radiohead" },
+        { "id": "coldplay", "text": "Coldplay" },
+        { "id": "blur", "text": "Blur" }
+      ],
+      "correctAnswerId": "radiohead"
+    }
+  ]
+}
