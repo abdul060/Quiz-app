@@ -1,0 +1,24 @@
+{
+  "topic": "Capitals",
+  "totalQuestions": 5,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/stockholm.jpg",
+        "alt": "A waterfront lined with pastel-coloured historic buildings and steep red roofs.",
+        "author": "OleNeitzel",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:OleNeitzel",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "answers": [
+        { "id": "stockholm", "text": "Stockholm" },
+        { "id": "copenhagen", "text": "Copenhagen" },
+        { "id": "oslo", "text": "Oslo" }
+      ],
+      "correctAnswerId": "stockholm"
+    }
+  ]
+}
