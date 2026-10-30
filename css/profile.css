@@ -266,7 +266,7 @@ main{
         transition: 0.3s ease;
     }
     #LogOut:hover{
-        background-color: var(--lightSecondHeadingColor);
+        background-color: var(--sectionSignature);
         color: var(--logofirstbackgroundcolor);
         border: none;
     }
