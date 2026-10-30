@@ -205,6 +205,9 @@ h3{
         font-weight: 550;
         color: var(--sectionSignature);
     }
+    a{
+        text-decoration: none;
+    }
 }
 
 /* this code is for footer dont touch /Abdul */
