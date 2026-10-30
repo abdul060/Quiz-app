@@ -252,6 +252,7 @@ main{
         border: none;
     }
     #LogOut{
+        transition: 0.3s ease;
         position: relative;
         top: 20px;
         width: 80%;
@@ -263,14 +264,13 @@ main{
         color: var(--sectionSignature);
         font-weight: 700;
         cursor: pointer;
-        transition: 0.3s ease;
+        -webkit-tap-highlight-color: transparent;
     }
     #LogOut:hover{
         background-color: var(--sectionSignature);
         color: var(--logofirstbackgroundcolor);
         border: none;
     }
-
 }
 
 
