@@ -14,7 +14,7 @@
       rel="stylesheet"/>
 
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/notification.css"
+    <link rel="stylesheet" href="css/notification.css">
   </head>
 
   <body>
@@ -27,43 +27,72 @@
         </div>
 
         <button type="button" class="bell-btn" id="bell-btn" aria-label="Notifications">
-          <img src="bell.png" alt="" />
+          <img src="assets/bell.png" alt="" />
       </button>
       </header>
 
       <main class="topics">
-        <button class="topic-card topic-card--capital" data-topic="capitals">
+        <button type="button" class="topic-card topic-card--capital" data-topic="capitals">
           <span class="topic-card__play" aria-hidden="true"></span>
           <span class="topic-card__info">Topic 1 · 5 Questions</span>
           <span class="topic-card__name">Capital</span>
-          <span class="topic-card__icon"><img src="globe.png" alt="" /></span>
+          <span class="topic-card__icon"><img src="assets/globe.png" alt="" /></span>
         </button>
 
-        <button class="topic-card topic-card--artists" data-topic="artists">
+        <button type="button" class="topic-card topic-card--artists" data-topic="artists">
           <span class="topic-card__play" aria-hidden="true"></span>
           <span class="topic-card__info">Topic 2 · 5 Questions</span>
           <span class="topic-card__name">Artists</span>
           <span class="topic-card__icon"
-            ><img src="microphone.png" alt=""
+            ><img src="assets/artists.png" alt=""
           /></span>
         </button>
 
-        <button class="topic-card topic-card--sport" data-topic="sports">
+        <button type="button" class="topic-card topic-card--sport" data-topic="sports">
           <span class="topic-card__play" aria-hidden="true"></span>
           <span class="topic-card__info">Topic 3 · 5 Questions</span>
           <span class="topic-card__name">Sport</span>
-          <span class="topic-card__icon"><img src="ball.png" alt="" /></span>
+          <span class="topic-card__icon"><img src="assets/ball.png" alt="" /></span>
         </button>
       </main>
 
       <!-- Nav-->
+<footer class="footer">
+        <nav class="footer_nav">
+            <ul class="footer_list">
 
+                <li>
+                    <a href="#">
+                        <img src="/assets/footer-home-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="scoreboard.html">
+                        <img src="/assets/footer-leaderboard-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Scoreboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <img src="/assets/footer-profile-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Profile</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </footer>
       <!-- Pop-up -->
 
       <div class="modal-overlay" id="modal-overlay" hidden>
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
           <div class="modal__badge-icon" aria-hidden="true">
-            <img src="bell.png" alt="" />
+            <img src="asssets/bell.png" alt="" />
+</div> 
 
             <!-- JS changes these next few depending on results-->
              <span class="modal__label">New challenge</span>
@@ -77,11 +106,11 @@
              >Play now</a>
 
              <button type="button" class="modal__later" id="later-btn">Maybe later</button>
-          </div> 
+          
         </div>
       </div>
-
+    </div>
       <!-- JavaScript -->
-      <script src="..js/home.js"></script>
+      <script src="js/home.js"></script>
   </body>
 </html>

@@ -14,6 +14,10 @@
     padding: 24px;
 }
 
+.modal-overlay[hidden] {
+    display:none;
+}
+
 .modal {
     position: relative;
     width: 100%;
@@ -23,6 +27,10 @@
     padding: 80px 24px 24px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Red circle behind the bell */
@@ -55,7 +63,7 @@
     padding: 2px 18px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--pink);
+    color: var(--pink-dark);
     background: #fde4ec;
     border-radius: 999px;
 }
@@ -64,25 +72,28 @@
     color: var(--text-dark);
     font-size: 26px;
     font-weight: 700;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 .modal__text {
     font-size: 14px;
     color: var(--text-dark);
+    margin-top: 0;
     margin-bottom: 20px;
     line-height: 1.4;
 }
 
 .modal__play {
     display: block;
+    box-sizing: border-box;
     text-decoration: none;
     width: 100%;
     padding: 14px;
     font-size: 16px;
     font-weight: 600;
     color: var(--white);
-    background: linear-gradient(135deg, #3b5bdb, #1c9fe0);
+    background: linear-gradient(135deg, #3b5bdb, #1971c2);
     border-radius: 10px;
     margin-bottom: 12px;
 }
@@ -93,4 +104,10 @@
     font-size: 16px;
     color: #3b5bdb;
     padding: 6px;
+
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
 }
+
