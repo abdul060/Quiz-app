@@ -29,17 +29,9 @@ button {
     width: 100%;
 }
 
-<<<<<<< HEAD
-:focus-visible {
-    outline: 3px solid var(--focus);
-    outline-offset: 3px;
-}
-
-=======
 a{
     text-decoration: none;
 }
->>>>>>> main
 /* mobile */
 .app {
     position: relative;
@@ -188,10 +180,6 @@ a{
     object-fit: contain;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 /* this code is for footer dont touch /Abdul */
 .footer{
     position: fixed;
@@ -199,10 +187,7 @@ a{
     left: 0;
     right: 0;
     padding: 0;
-<<<<<<< HEAD
-=======
     font-family: "poppins", sans-serif;
->>>>>>> main
 }
 .footer_nav{
     display: flex;
@@ -223,10 +208,7 @@ a{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-<<<<<<< HEAD
     
-=======
->>>>>>> main
 }
 .footer_list li{
     list-style: none;
@@ -244,7 +226,6 @@ a{
     color: #6B7080;
     font-family: var(--main-font);
 }
-<<<<<<< HEAD
 /* this code is for footer dont touch /Abdul */
 
 @media (min-width: 600px) {
@@ -285,6 +266,4 @@ a{
         height: 160px;
     }
 }
-=======
 /* this code is for footer dont touch /Abdul */
->>>>>>> main
