@@ -18,7 +18,7 @@
 
 body {
     font-family: var(--main-font);
-    background: #f2f2f2;
+    background: var(--white);
     color: var(--text-dark);
 }
 
@@ -239,6 +239,12 @@ button {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 56px 32px;
+    }
+}
+
+@media (min-width: 900px) {
+    .app {
+        max-width: 860px;
     }
 }
 
