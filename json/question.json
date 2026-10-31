@@ -1,0 +1,95 @@
+{
+  "topic": "Capitals",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/stockholm.jpg",
+        "alt": "A waterfront lined with pastel-coloured historic buildings and steep red roofs.",
+        "author": "OleNeitzel",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:OleNeitzel",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "answers": [
+        { "id": "stockholm", "text": "Stockholm" },
+        { "id": "copenhagen", "text": "Copenhagen" },
+        { "id": "oslo", "text": "Oslo" }
+      ],
+      "correctAnswerId": "stockholm"
+    },
+    {
+      "id": 2,
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/amsterdam.jpg",
+        "alt": "Narrow brick houses with gabled roofs along a canal.",
+        "author": "Kaci Baum",
+        "authorUrl": "https://unsplash.com/@kacibaum",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "answers": [
+        { "id": "brussels", "text": "Brussels" },
+        { "id": "amsterdam", "text": "Amsterdam" },
+        { "id": "vienna", "text": "Vienna" }
+      ],
+      "correctAnswerId": "amsterdam"
+    },
+    {
+      "id": 3,
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/london.jpg",
+        "alt": "A grand Gothic government building with a tall clock tower beside a wide river.",
+        "author": "Arpingstone",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:Arpingstone",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Palace.of.westminster.arp.jpg"
+      },
+      "answers": [
+        { "id": "dublin", "text": "Dublin" },
+        { "id": "paris", "text": "Paris" },
+        { "id": "london", "text": "London" }
+      ],
+      "correctAnswerId": "london"
+    },
+    {
+      "id": 4,
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/rome.jpg",
+        "alt": "The weathered arches of a huge ancient stone amphitheatre.",
+        "author": "maiterozas",
+        "authorUrl": "https://pixabay.com/users/maiterozas-3811814/",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "answers": [
+        { "id": "athens", "text": "Athens" },
+        { "id": "rome", "text": "Rome" },
+        { "id": "madrid", "text": "Madrid" }
+      ],
+      "correctAnswerId": "rome"
+    },
+    {
+      "id": 5,
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/berlin.jpg",
+        "alt": "A large neoclassical gate with tall columns lit up at dusk.",
+        "author": "Thomas Wolf",
+        "authorUrl": "https://www.foto-tw.de/",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "answers": [
+        { "id": "berlin", "text": "Berlin" },
+        { "id": "prague", "text": "Prague" },
+        { "id": "warsaw", "text": "Warsaw" }
+      ],
+      "correctAnswerId": "berlin"
+    }
+  ]
+}
