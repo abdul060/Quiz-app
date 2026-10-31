@@ -11,4 +11,4 @@ export const DEFUALT_TOPIC = "capitals";
 
 // The adress of the questions for a topic 
 
-export const getQuizUr1 = (topic) => `questions.html?topic=${topic}`;
+export const getQuizUrl = (topic) => `pages/questions.html?topic=${topic}`;

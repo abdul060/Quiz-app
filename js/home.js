@@ -1,5 +1,5 @@
-import { setupTopicCards } from "./topicCards.js";
-import { setupNotification } from ".notification.js";
+import { setupTopicCards } from "./Topiccards.js";
+import { setupNotification } from "./Notification.js";
 
 setupTopicCards();
 setupNotification();

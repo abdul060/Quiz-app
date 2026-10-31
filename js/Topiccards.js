@@ -1,7 +1,7 @@
 // The three topic cards on the home page
 
-import { saveSelectedTopics } from "./Storage";
-import { getQuizUr1 } from "./Topics";
+import { saveSelectedTopic } from "./Storage.js";
+import { getQuizUrl } from "./Topics.js";
 
 // When a card is clicked, remember the topic and go to the questions page
 export const setupTopicCards = () => {
@@ -11,8 +11,8 @@ export const setupTopicCards = () => {
         card.addEventListener("click", () => {
             const { topic } = card.dataset; //destructuring 
             
-            saveSelectedTopics(topic);
-            window.location.href = getQuizUr1(topic);
+            saveSelectedTopic(topic);
+            window.location.href = getQuizUrl(topic);
         });
     });
 };

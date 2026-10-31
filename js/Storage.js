@@ -17,7 +17,7 @@ const readJSON = (key, fallback) => {
 };
 
 // ALL FINISHED ROUNDS
-export const getScores = () => readJSON(KEYS,scores, []);
+export const getScores = () => readJSON(KEYS.scores, []);
 
 // THE LATEST ROUND, OR UNDEFINED 
 
@@ -26,7 +26,7 @@ export const getLatestScore = () => getScores().at(-1);
 // SAVES ONE FINISHED ROUND. 
 
 export const saveScore = ({ topic, score, total }) => {
-    const newRound = { topic, score, total, date: new Date(). toISOString() };
+    const newRound = { topic, score, total, date: new Date().toISOString() };
     const scores = [...getScores(), newRound];
     localStorage.setItem(KEYS.scores, JSON.stringify(scores));
 };
