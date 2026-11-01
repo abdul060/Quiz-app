@@ -1,3 +1,6 @@
+import { saveScore } from "./Storage.js";
+const quizMain = document.querySelector(".quiz-main");
+const questionPicture = document.getElementById("question-picture");
 const questionImage = document.getElementById("question-image");
 const photoAuthor = document.getElementById("photo-author");
 const photoLicense = document.getElementById("photo-license");
@@ -5,153 +8,228 @@ const questionCategory = document.getElementById("question-category");
 const questionTitle = document.getElementById("question-title");
 const answerList = document.getElementById("answer-list");
 const questionNumber = document.getElementById("question-number");
+const questionTotal = document.getElementById("question-total");
 const questionProgress = document.getElementById("question-progress");
 const progressCircle = document.querySelector(".progress-value");
 const quizScore = document.getElementById("quiz-score");
 const quizTime = document.getElementById("quiz-time");
 const feedback = document.getElementById("answer-feedback");
+const retryButton = document.getElementById("retry-button");
 const timePopup = document.getElementById("time-popup");
+const timePopupText = document.getElementById("time-popup-text");
 const playAgainButton = document.getElementById("play-again-button");
-
+const resultsLink = document.getElementById("results-link");
 const CIRCLE_LENGTH = 150.8;
-
-let topic = "";
+const TIME_LIMIT = 120;
+const topic = new URLSearchParams(location.search).get("topic") ?? "capitals";
+const topicNames = { capitals: "Capitals", artists: "Artists", sports: "Sports" };
 let questions = [];
 let currentIndex = 0;
-let question = null;
 let score = 0;
 let hasAnswered = false;
 let quizOver = false;
-let timeLeft = 120;
+let timeLeft = TIME_LIMIT;
+let deadline = 0;
 let timerId = null;
-
+let nextQuestionId = null;
 async function loadQuiz() {
-  const response = await fetch("/json/question.json");
-  const data = await response.json();
-  topic = data.topic;
-  questions = data.questions;
-  showQuestion();
-  startTimer();
-}
-
-function showQuestion() {
-  question = questions[currentIndex];
-  hasAnswered = false;
+  retryButton.hidden = true;
+  retryButton.disabled = true;
   feedback.textContent = "";
-
-  const number = currentIndex + 1;
-  const total = questions.length;
-
-  questionNumber.textContent = number;
-  questionCategory.textContent = topic + " · Question " + number + " of " + total;
-  questionProgress.setAttribute("aria-label", "Question " + number + " of " + total);
-  progressCircle.style.strokeDasharray = (number / total) * CIRCLE_LENGTH + " " + CIRCLE_LENGTH;
-
-  questionImage.src = question.image.src;
-  questionImage.alt = question.image.alt;
-  photoAuthor.textContent = question.image.author;
-  photoAuthor.href = question.image.authorUrl;
-  photoLicense.textContent = question.image.license;
-  photoLicense.href = question.image.licenseUrl;
-  questionTitle.textContent = question.question;
-
-  answerList.innerHTML = "";
-
-  for (const answer of question.answers) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "answer-button";
-    button.textContent = answer.text;
-    button.dataset.answerId = answer.id;
-    button.addEventListener("click", function () {
-      checkAnswer(button);
-    });
-    answerList.appendChild(button);
+  questionTitle.textContent = "Loading quiz…";
+  try {
+    if (!["capitals", "artists", "sports"].includes(topic)) {
+      throw new Error("Unknown topic");
+    }
+    const response = await fetch("../json/question.json");
+    if (!response.ok) {
+      throw new Error("Questions unavailable");
+    }
+    const data = await response.json();
+    questions = data.questions.filter((item) => item.topic === topic);
+    if (questions.length === 0) {
+      throw new Error("No questions found");
+    }
+    for (const question of questions) {
+      if (typeof question.correctAnswerId !== "string") {
+        throw new Error("The correct answer ID must be a string");
+      }
+    }
+    document.title = `${topicNames[topic]} - Quiz`;
+    showQuestion();
+    startTimer();
+  } catch {
+    questionPicture.hidden = true;
+    quizMain.classList.add("quiz-main--text-only");
+    answerList.replaceChildren();
+    questionCategory.textContent = "Quiz";
+    questionTitle.textContent = "Quiz unavailable";
+    feedback.textContent = "We couldn't load this quiz. Try again or choose a topic on the home page.";
+    retryButton.textContent = "Try again";
+    retryButton.hidden = false;
+    retryButton.disabled = false;
+    questionTitle.focus();
   }
 }
-
+function shuffleAnswers(answers) {
+  const remaining = [...answers];
+  const shuffled = [];
+  while (remaining.length > 0) {
+    const index = Math.floor(Math.random() * remaining.length);
+    shuffled.push(remaining[index]);
+    remaining.splice(index, 1);
+  }
+  return shuffled;
+}
+function createAnswerButton(answer) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "answer-button";
+  button.textContent = answer.text;
+  button.dataset.answerId = answer.id;
+  return button;
+}
+function showQuestion() {
+  const question = questions[currentIndex];
+  const number = currentIndex + 1;
+  const total = questions.length;
+  hasAnswered = false;
+  feedback.textContent = "";
+  questionNumber.textContent = number;
+  questionTotal.textContent = total;
+  questionCategory.textContent = `${topicNames[topic]} · Question ${number} of ${total}`;
+  questionProgress.setAttribute("aria-label", `Question ${number} of ${total}`);
+  progressCircle.style.strokeDasharray = `${(number / total) * CIRCLE_LENGTH} ${CIRCLE_LENGTH}`;
+  questionPicture.hidden = !question.image;
+  quizMain.classList.toggle("quiz-main--text-only", !question.image);
+  if (question.image) {
+    const { src, alt, author, authorUrl, license, licenseUrl } = question.image;
+    questionImage.src = src;
+    questionImage.alt = alt;
+    photoAuthor.textContent = author;
+    photoAuthor.href = authorUrl;
+    photoLicense.textContent = license;
+    photoLicense.href = licenseUrl;
+  }
+  questionTitle.textContent = question.question;
+  answerList.replaceChildren();
+  for (const answer of shuffleAnswers(question.answers)) {
+    answerList.appendChild(createAnswerButton(answer));
+  }
+  questionTitle.focus();
+}
 function startTimer() {
-  showTime();
-  timerId = setInterval(function () {
-    timeLeft = timeLeft - 1;
-    showTime();
-    if (timeLeft <= 0) {
-      timeIsUp();
-    }
-  }, 1000);
+  deadline = Date.now() + TIME_LIMIT * 1000;
+  updateTimer();
+  timerId = setInterval(updateTimer, 1000);
 }
-
-function showTime() {
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = timeLeft % 60;
-  quizTime.textContent =
-    String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+function updateTimer() {
+  timeLeft = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+  const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
+  const seconds = String(timeLeft % 60).padStart(2, "0");
+  quizTime.textContent = `${minutes}:${seconds}`;
+  quizTime.dateTime = `PT${timeLeft}S`;
+  if (timeLeft === 0) {
+    finishQuiz();
+  }
 }
-
 function lockButtons() {
-  const allButtons = answerList.querySelectorAll(".answer-button");
-  for (const button of allButtons) {
+  for (const button of answerList.children) {
     button.disabled = true;
   }
 }
-
-function findCorrectButton() {
-  return answerList.querySelector(
-    '[data-answer-id="' + question.correctAnswerId + '"]'
-  );
+function checkAnswer(event) {
+  const clickedButton = event.target.closest(".answer-button");
+  if (clickedButton === null || hasAnswered || quizOver) {
+    return;
+  }
+  updateTimer();
+  if (quizOver) {
+    return;
+  }
+  hasAnswered = true;
+  lockButtons();
+  const question = questions[currentIndex];
+  let correctText = "";
+  for (const button of answerList.children) {
+    if (button.dataset.answerId === question.correctAnswerId) {
+      button.classList.add("answer-button--correct");
+      correctText = button.textContent;
+    }
+  }
+  if (clickedButton.dataset.answerId === question.correctAnswerId) {
+    score++;
+    quizScore.textContent = score;
+    feedback.textContent = "Correct!";
+  } else {
+    clickedButton.classList.add("answer-button--wrong");
+    feedback.textContent = `Not quite. The right answer is ${correctText}.`;
+  }
+  feedback.focus();
+  nextQuestionId = setTimeout(goToNextQuestion, 2000);
 }
-
-function timeIsUp() {
+function goToNextQuestion() {
+  if (quizOver) {
+    return;
+  }
+  updateTimer();
+  if (quizOver) {
+    return;
+  }
+  currentIndex++;
+  if (currentIndex < questions.length) {
+    showQuestion();
+  } else {
+    finishQuiz();
+  }
+}
+function finishQuiz() {
   if (quizOver) {
     return;
   }
   quizOver = true;
   clearInterval(timerId);
+  clearTimeout(nextQuestionId);
   lockButtons();
-
-  timePopup.hidden = false;
-  playAgainButton.focus();
+  saveResult();
 }
-
-function checkAnswer(clickedButton) {
-  if (hasAnswered || quizOver) {
+function saveResult() {
+  retryButton.disabled = true;
+  try {
+    saveScore({ topic, score, total: questions.length });
+  } catch {
+    questionTitle.textContent = "Quiz finished";
+    feedback.textContent = `You scored ${score} out of ${questions.length}. Your result couldn't be saved. Allow browser storage, then try saving again.`;
+    retryButton.textContent = "Try saving again";
+    retryButton.hidden = false;
+    retryButton.disabled = false;
+    retryButton.focus();
     return;
   }
-  hasAnswered = true;
-  lockButtons();
-
-  if (clickedButton.dataset.answerId === question.correctAnswerId) {
-    score = score + 1;
-    quizScore.textContent = score;
-    clickedButton.classList.add("answer-button--correct");
-    feedback.textContent = "Correct!";
+  retryButton.hidden = true;
+  if (timeLeft === 0) {
+    timePopupText.textContent = `Your time is up. You scored ${score} out of ${questions.length}. Your result has been saved.`;
+    timePopup.showModal();
+    resultsLink.focus();
   } else {
-    clickedButton.classList.add("answer-button--wrong");
-    const correctButton = findCorrectButton();
-    correctButton.classList.add("answer-button--correct");
-    feedback.textContent = "Not quite. The right answer is " + correctButton.textContent + ".";
-  }
-
-  setTimeout(goToNextQuestion, 2000);
-}
-
-function goToNextQuestion() {
-  if (quizOver) {
-    return;
-  }
-
-  if (currentIndex < questions.length - 1) {
-    currentIndex = currentIndex + 1;
-    showQuestion();
-  } else {
-    quizOver = true;
-    clearInterval(timerId);
     location.href = "scoreboard.html";
   }
 }
-
-playAgainButton.addEventListener("click", function () {
-  location.reload();
+function retryQuiz() {
+  if (retryButton.disabled) {
+    return;
+  }
+  if (quizOver) {
+    saveResult();
+  } else {
+    loadQuiz();
+  }
+}
+answerList.addEventListener("click", checkAnswer);
+retryButton.addEventListener("click", retryQuiz);
+playAgainButton.addEventListener("click", () => location.reload());
+timePopup.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  location.href = "scoreboard.html";
 });
-
 loadQuiz();
