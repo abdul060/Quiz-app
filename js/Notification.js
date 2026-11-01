@@ -94,11 +94,13 @@ export const setupNotification = () =>  {
     //click on the dark background closes it
     overlay.addEventListener("click", (event) => {
         if (event.target === overlay) closePopup();
+                console.log("did it work2")
     });
 
     //escape key closes it
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && !overlay.hidden) closePopup();
+        console.log("did it work2")
     });
 
     //remember the topic when "play no" is clicked

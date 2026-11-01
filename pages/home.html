@@ -15,6 +15,7 @@
       rel="stylesheet"/>
 
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/notification.css">
   </head>
 
   <body>
@@ -27,7 +28,7 @@
         </div>
 
         <button type="button" class="bell-btn" id="bell-btn" aria-label="Notifications">
-          <img src="assets/bell.png" alt="" />
+          <img src="../assets/bell.png" alt="" />
       </button>
       </header>
 
@@ -36,7 +37,7 @@
           <span class="topic-card__play" aria-hidden="true"></span>
           <span class="topic-card__info">Topic 1 · 5 Questions</span>
           <span class="topic-card__name">Capital</span>
-          <span class="topic-card__icon"><img src="globe.png" alt="" /></span>
+          <span class="topic-card__icon"><img src="../assets/globe.png" alt="" /></span>
         </button></a>
 
         <button type="button" class="topic-card topic-card--artists" data-topic="artists">
@@ -44,7 +45,7 @@
           <span class="topic-card__info">Topic 2 · 5 Questions</span>
           <span class="topic-card__name">Artists</span>
           <span class="topic-card__icon"
-            ><img src="assets/artists.png" alt=""
+            ><img src="../assets/artists.png" alt=""
           /></span>
         </button>
 
@@ -52,18 +53,11 @@
           <span class="topic-card__play" aria-hidden="true"></span>
           <span class="topic-card__info">Topic 3 · 5 Questions</span>
           <span class="topic-card__name">Sport</span>
-          <span class="topic-card__icon"><img src="assets/ball.png" alt="" /></span>
+          <span class="topic-card__icon"><img src="../assets/ball.png" alt="" /></span>
         </button>
       </main>
 
       <!-- Nav-->
-<footer class="footer">
-        <nav class="footer_nav">
-            <ul class="footer_list">
-
-
-
-
       <!-- // this code for footer dont tocuh /Abdul // -->
     <footer class="footer">
         <nav class="footer_nav">
@@ -93,13 +87,14 @@
             </ul>
         </nav>
     </footer>
+
       <!-- Pop-up -->
 
       <div class="modal-overlay" id="modal-overlay" hidden>
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
 
           <div class="modal__badge-icon" aria-hidden="true">
-            <img src="assets/bell.png" alt="" />
+            <img src="../assets/bell.png" alt="" />
 </div> 
 
             <!-- JS changes these next few depending on results-->
@@ -120,6 +115,6 @@
 <!-- // this code for footer dont tocuh /Abdul // -->
     </div>
       <!-- JavaScript -->
-      <script type="module" src="js/home.js"></script>
+      <script type="module" src="../js/home.js"></script>
   </body>
 </html>
