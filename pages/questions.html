@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Test your knowledge of capitals, sports and artists in our quiz.">
-    <title>Capitals – Quiz</title>
+    <title>Capitals - Quiz</title>
+    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
     <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/questions.css">
   </head>
@@ -48,6 +49,7 @@
             <button class="answer-button" type="button" data-answer-id="copenhagen">Copenhagen</button>
             <button class="answer-button" type="button" data-answer-id="oslo">Oslo</button>
           </div>
+          <p class="answer-feedback" id="answer-feedback" role="status"></p>
         </section>
       </main>
       <footer class="quiz-footer">
@@ -60,6 +62,14 @@
         </nav>
       </footer>
     </div>
-    <p class="preview-note">Design preview: answers and the timer are not active yet. <a href="question-credits.html">Photo credits</a></p>
+    <div class="time-popup" id="time-popup" hidden>
+      <div class="time-popup__box" role="alertdialog" aria-modal="true" aria-labelledby="time-popup-title" aria-describedby="time-popup-text">
+        <h2 id="time-popup-title">Time is up!</h2>
+        <p id="time-popup-text">You didn't answer in time.</p>
+        <button type="button" class="time-popup__button" id="play-again-button">Play again</button>
+      </div>
+    </div>
+    <p class="preview-note"><a href="question-credits.html">Photo credits</a></p>
+    <script src="../js/question.js" defer></script>
   </body>
 </html>
