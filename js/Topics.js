@@ -7,8 +7,8 @@ export const TOPICS = {
     sports: { name: "Sports", next: "capitals"},
 };
 
-export const DEFUALT_TOPIC = "capitals"; 
+export const DEFALT_TOPIC = "capitals"; 
 
 // The adress of the questions for a topic 
 
-export const getQuizUrl = (topic) => `pages/questions.html?topic=${topic}`;
+export const getQuizUrl = (topic) => `questions.html?topic=${topic}`;
