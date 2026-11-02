@@ -1,4 +1,4 @@
-/* Grunden*/
+/* Root*/
 
 * {
     margin: 0;
@@ -12,7 +12,6 @@
     --text-dark: #1b1d2a;
     --text-grey: #6b7080;
     --white: #ffffff;
-    --focus: #3b5bdb;
     --main-font: "Poppins", sans-serif;
 }
 
@@ -90,6 +89,7 @@ a{
 
 .topic-card {
     position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -156,7 +156,7 @@ a{
     line-height: 1.1;
 }
 
-/* Vit cirkel med ikon */
+/* White circle with icon */
 
 .topic-card__icon {
     position: absolute;
@@ -172,7 +172,7 @@ a{
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Storlek på bild i den vita cirkeln */
+/* Size of image */
 .topic-card__icon img {
     width: 56px;
     height: 56px;

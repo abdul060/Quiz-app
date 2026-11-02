@@ -1,7 +1,7 @@
 // notification.js - the notification popup on the home page
 
 import { getLatestScore, saveSelectedTopic } from "./Storage.js";
-import { TOPICS, DEFUALT_TOPIC, getQuizUrl } from "./Topics.js";
+import { TOPICS, DEFAULT_TOPIC, getQuizUrl } from "./Topics.js";
 
 // Decide what the popup should say
 // Gets the latest round (or undefined) and returns the text to show
@@ -13,20 +13,20 @@ const createMessage = (latestRound) => {
             label: "Welcome",
             title: "Welcome to the quiz",
             text: "Play your first round and get on the scoreboard.",
-            topic: DEFUALT_TOPIC,
+            topic: DEFAULT_TOPIC,
         };
     }
 
 
 const { topic, score, total } = latestRound;
-const { name, next } = TOPICS[topic] ?? { name: topic, next: DEFUALT_TOPIC };
+const { name, next } = TOPICS[topic] ?? { name: topic, next: DEFAULT_TOPIC };
 
 // B) Perfect score => suggest the next topic
 if (score === total) {
     return {
     label: "Perfect score", 
     title: "Wow, perfect score!",
-    text: `You got ${score}/${total} in ${name}. Ready for ${TOPICS[next].name}`,
+    text: `You got ${score}/${total} in ${name}. Ready for ${TOPICS[next].name}?`,
     topic: next,
     };
 }
@@ -94,16 +94,14 @@ export const setupNotification = () =>  {
     //click on the dark background closes it
     overlay.addEventListener("click", (event) => {
         if (event.target === overlay) closePopup();
-                console.log("did it work2")
     });
 
     //escape key closes it
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && !overlay.hidden) closePopup();
-        console.log("did it work2")
     });
 
-    //remember the topic when "play no" is clicked
+    //remember the topic when "play now" is clicked
     playLink.addEventListener("click", () => {
         saveSelectedTopic(playLink.dataset.topic);
     });
