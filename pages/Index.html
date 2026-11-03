@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Login</title>
+    <title>Log in | Quiz App</title>
 </head>
 <body>
     <header>
@@ -25,28 +25,28 @@
             <p>Log in to keep playing!</p>
         </div>
     </header>
-     <div class="statsContainer" role="group" aria-label="Your statistics">
+     <form class="statsContainer" aria-label="Log in">
             <div class="InputsContainer">
                 <div class="UsernameInputcontainer">
                     <div class="iconBackground"><img src="/assets/person-icon-hd.png" alt=""></div>
-                    <input type="text" placeholder="Username or Email" id="UsernameOrEmailInput">
+                    <input type="text" placeholder="Username or Email" id="UsernameOrEmailInput" aria-label="Username or Email">
                 </div>
                     <p class="invalidcontent">Username or Email is incorrect</p>
                 <div class="PasswordInputcontainer">
                     <div class="iconBackground2"><img src="/assets/lock-icon-hd.png" alt=""></div>
-                    <input type="password" placeholder="Password" id="PasswordInput">
+                    <input type="password" placeholder="Password" id="PasswordInput" aria-label="Password">
                 </div>
                 <p class="invalidcontent">Password is incorrect</p>
             </div>
             <div class="SubContainer">
                 <div class="RememberContainer">
-                    <input type="checkbox" id="RememberMeChecker"> <p>Remember me</p>
+                    <input type="checkbox" id="RememberMeChecker"> <label for="RememberMeChecker">Remember me</label>
                 </div>
                 <p>Forgot password?</p>
             </div>
-            <button id="LogInButton">Log in</button>
-        </div>
-        <h3>Don`t have an account? <a href="Signup.html"><span>Sign up</span></a></h3>
+            <button type="button" id="LogInButton">Log in</button>
+        </form>
+        <p class="AccountPrompt">Don't have an account? <a href="Signup.html"><span>Sign up</span></a></p>
         
         <!-- // this code for footer dont tocuh /Abdul // -->
     <footer class="footer">

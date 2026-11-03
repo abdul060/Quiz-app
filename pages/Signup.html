@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Sign up | Quiz App</title>
     <link rel="stylesheet" href="/css/Signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -25,35 +25,35 @@
             <p>Sign up and start playing</p>
         </div>
     </header>
-     <div class="statsContainer" role="group" aria-label="Your statistics">
+     <form class="statsContainer" aria-label="Sign up">
             <div class="InputsContainer">
                 <div class="UsernameInputcontainer">
                     <div class="iconBackground"><img src="/assets/person-icon-hd.png" alt=""></div>
-                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Username" aria-label="Username">
                 </div>
                 <div class="PasswordInputcontainer">
                     <div class="iconBackground2"><img src="/assets/lock-icon-hd.png" alt=""></div>
-                    <input type="text" placeholder="Email">
+                    <input type="email" placeholder="Email" aria-label="Email">
                 </div>
             </div>
             <div class="InputsContainer">
                 <div class="UsernameInputcontainer">
                     <div class="iconBackground"><img src="/assets/person-icon-hd.png" alt=""></div>
-                    <input type="text" placeholder="Password">
+                    <input type="password" placeholder="Password" aria-label="Password">
                 </div>
                 <div class="PasswordInputcontainer">
                     <div class="iconBackground2"><img src="/assets/lock-icon-hd.png" alt=""></div>
-                    <input type="text" placeholder="Confirm password">
+                    <input type="password" placeholder="Confirm password" aria-label="Confirm password">
                 </div>
             </div>
             <div class="SubContainer">
                 <div class="RememberContainer">
-                    <input type="checkbox"> <p>I agree to the terms</p>
+                    <input type="checkbox" id="TermsChecker"> <label for="TermsChecker">I agree to the terms</label>
                 </div>
             </div>
-            <button>Sign up</button>
-        </div>
-        <h3>Already have an account? <a href="index.html"><span>Log in</span></a></h3>
+            <button type="button">Sign up</button>
+        </form>
+        <p class="AccountPrompt">Already have an account? <a href="index.html"><span>Log in</span></a></p>
 
 
 
