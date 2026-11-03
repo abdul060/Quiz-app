@@ -4,7 +4,7 @@
 }
 
 :root{
-    --lineargradient: linear-gradient(to bottom ,#1C8FE0 , #3B5BDB);
+    --lineargradient: linear-gradient(to bottom ,#1970C4 , #3B5BDB);
     --logofirstbackgroundcolor: #ffffff;
     --logosecondbackgroundcolor: linear-gradient(to right , #D6336C , #E8590C);
     --statsbackgroundcolor: #F6F6F6;
