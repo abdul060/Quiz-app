@@ -1,0 +1,106 @@
+{
+  "topic": "sports",
+  "difficulty": "hard",
+  "questions": [
+    {
+      "id": "sports-01",
+      "question": "How many players does each team have on the field in football (soccer)?",
+      "answers": [
+        {
+          "id": "eleven",
+          "text": "11"
+        },
+        {
+          "id": "ten",
+          "text": "10"
+        },
+        {
+          "id": "twelve",
+          "text": "12"
+        }
+      ],
+      "correctAnswerId": "eleven",
+      "topic": "sports"
+    },
+    {
+      "id": "sports-02",
+      "question": "How many rings are on the Olympic flag?",
+      "answers": [
+        {
+          "id": "five",
+          "text": "5"
+        },
+        {
+          "id": "four",
+          "text": "4"
+        },
+        {
+          "id": "six",
+          "text": "6"
+        }
+      ],
+      "correctAnswerId": "five",
+      "topic": "sports"
+    },
+    {
+      "id": "sports-03",
+      "question": "How many points is a touchdown worth in American football?",
+      "answers": [
+        {
+          "id": "six",
+          "text": "6"
+        },
+        {
+          "id": "three",
+          "text": "3"
+        },
+        {
+          "id": "seven",
+          "text": "7"
+        }
+      ],
+      "correctAnswerId": "six",
+      "topic": "sports"
+    },
+    {
+      "id": "sports-04",
+      "question": "How long is a marathon?",
+      "answers": [
+        {
+          "id": "full-distance",
+          "text": "42.195 km"
+        },
+        {
+          "id": "forty",
+          "text": "40 km"
+        },
+        {
+          "id": "forty-five",
+          "text": "45 km"
+        }
+      ],
+      "correctAnswerId": "full-distance",
+      "topic": "sports"
+    },
+    {
+      "id": "sports-05",
+      "question": "Which Swedish tennis player won Wimbledon five years in a row (1976–1980)?",
+      "answers": [
+        {
+          "id": "borg",
+          "text": "Björn Borg"
+        },
+        {
+          "id": "edberg",
+          "text": "Stefan Edberg"
+        },
+        {
+          "id": "wilander",
+          "text": "Mats Wilander"
+        }
+      ],
+      "correctAnswerId": "borg",
+      "topic": "sports"
+    }
+  ]
+}
