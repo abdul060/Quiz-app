@@ -1,4 +1,6 @@
 import { saveScore } from "./Storage.js";
+import { loadQuestions } from "./quizData.js";
+import { startTimer, stopTimer, getTimeLeft } from "./quizTimer.js";
 const quizMain = document.querySelector(".quiz-main");
 const questionPicture = document.getElementById("question-picture");
 const questionImage = document.getElementById("question-image");
@@ -29,35 +31,17 @@ let score = 0;
 let hasAnswered = false;
 let quizOver = false;
 let timeLeft = TIME_LIMIT;
-let deadline = 0;
-let timerId = null;
 let nextQuestionId = null;
 async function loadQuiz() {
   retryButton.hidden = true;
   retryButton.disabled = true;
   feedback.textContent = "";
-  questionTitle.textContent = "Loading quiz…";
+  questionTitle.textContent = "Loading question…";
   try {
-    if (!["capitals", "artists", "sports"].includes(topic)) {
-      throw new Error("Unknown topic");
-    }
-    const response = await fetch("../json/question.json");
-    if (!response.ok) {
-      throw new Error("Questions unavailable");
-    }
-    const data = await response.json();
-    questions = data.questions.filter((item) => item.topic === topic);
-    if (questions.length === 0) {
-      throw new Error("No questions found");
-    }
-    for (const question of questions) {
-      if (typeof question.correctAnswerId !== "string") {
-        throw new Error("The correct answer ID must be a string");
-      }
-    }
+    questions = await loadQuestions(topic);
     document.title = `${topicNames[topic]} - Quiz`;
     showQuestion();
-    startTimer();
+    startTimer(TIME_LIMIT, updateTimer);
   } catch {
     questionPicture.hidden = true;
     quizMain.classList.add("quiz-main--text-only");
@@ -118,13 +102,8 @@ function showQuestion() {
   }
   questionTitle.focus();
 }
-function startTimer() {
-  deadline = Date.now() + TIME_LIMIT * 1000;
-  updateTimer();
-  timerId = setInterval(updateTimer, 1000);
-}
 function updateTimer() {
-  timeLeft = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+  timeLeft = getTimeLeft();
   const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
   const seconds = String(timeLeft % 60).padStart(2, "0");
   quizTime.textContent = `${minutes}:${seconds}`;
@@ -188,7 +167,7 @@ function finishQuiz() {
     return;
   }
   quizOver = true;
-  clearInterval(timerId);
+  stopTimer();
   clearTimeout(nextQuestionId);
   lockButtons();
   saveResult();

@@ -224,7 +224,7 @@ img { display: block; max-width: 100%; }
 .answer-button:disabled { cursor: default; opacity: 1; }
 .answer-button:not(:disabled):hover { background: #e8edff; }
 .answer-button:not(:disabled):active { background: #d8e1ff; }
-.answer-button--correct { background: #187435; color: #fff; border-color: #fff; }
+.answer-button--correct { background: #1e7e34; color: #fff; border-color: #fff; }
 .answer-button--wrong { background: #b42335; color: #fff; border-color: #fff; }
 .answer-feedback { min-height: 1.5em; margin: 16px 0 0; font-weight: 600; }
 .answer-feedback:focus, #question-title:focus { outline: none; }
