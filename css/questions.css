@@ -19,14 +19,7 @@
   font-weight: 700;
   font-display: swap;
 }
-:root {
-  --quiz-blue-top: #126fab;
-  --quiz-blue-bottom: #3b5adc;
-  --quiz-answer: #364bc1;
-  --quiz-white: #fff;
-  --quiz-muted: #545b6b;
-  --quiz-focus: #ffdf6d;
-}
+
 * { box-sizing: border-box; }
 .question-page {
   margin: 0;
