@@ -3,23 +3,6 @@
     padding: 0;
 }
 
-:root{
-    --lineargradient: linear-gradient(to bottom ,#1970C4 , #3B5BDB);
-    --lineargradientright: linear-gradient(to right ,#1970C4 , #3B5BDB);
-    --logofirstbackgroundcolor: #ffffff;
-    --logosecondbackgroundcolor: linear-gradient(to right , #D6336C , #E8590C);
-    --statsbackgroundcolor: #F6F6F6;
-    --headingColor: #3B5BDB;
-    --secondheadingColor: #D6336C;
-    --lightSecondHeadingColor: rgba(214, 51, 108, 0.1);
-    --thirdheadingColor: #7048E8;
-    --textColor: rgba(107, 112, 128);
-    --buttonBackgroundColor: rgba(107, 112, 128 , 0.4);
-    --lightBlue: #EEF3FF;
-    --dividerLine: rgb(128, 128, 128 , 0.1);
-    --sectionSignature: #C2255C;
-    --invalidInput: #C92A2A;
-}
 body{
     font-family: "Inter", sans-serif;
 }
@@ -223,59 +206,7 @@ body{
     }
 }
 
-/* this code is for footer dont touch /Abdul */
-.footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0;
-    margin: 0;
-    --main-font: "poppins", sans-serif;
-}
-.footer_nav{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    background: #ffffff;
-    border-radius: 26px 26px 0 0;
-    box-shadow: 0 -6px 20px rgba(27, 29, 42, 0.06);
-}
-.footer_list{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0 16px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    
-}
-.footer_list li{
-    list-style: none;
-}
-.footer_list a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    gap: 4px;
-}
-.footer_span{
-    font-size: 12px;
-    font-weight: 500;
-    color: #6B7080;
-    font-family: var(--main-font);
-}
-/* this code is for footer dont touch /Abdul */
 
-button:focus-visible , a:focus-visible , input:focus-visible{
-    outline: 2px solid var(--headingColor);
-    outline-offset: 2px;
-}
 
 @media (max-width: 350px){
     .statsContainer{

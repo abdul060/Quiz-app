@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/css/scoreboard.css">
-    <title>Quiz App</title>
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <title>Scoreboard - Quiz App</title>
     
 </head>
 <body>
@@ -19,63 +21,24 @@
             <p class="scoreboard_subtitle">Your best rounds so far</p>
         </header>
 
-        <div class="tabs">
-            <a href="scoreboard.html"><button class="tabs_btn tabs_btn-active">My scores</button></a>
-            <a href="leaderboard.html"><button class="tabs_btn">Leaderboard</button></a>
-        </div>
+
+        <nav class="tabs" aria-label="Scores">
+        <a href="scoreboard.html" class="tabs_btn tabs_btn-active" aria-current="page">My scores</a>
+        <a href="leaderboard.html" class="tabs_btn">Leaderboard</a>
+        </nav>
+
 
         <section class="latest">
-            <div class="latest_test">
+            <div class="latest_text">
                 <p class="latest_label">Latest round · Capitals</p>
-                <h2 class="latest_message">Greatjob!</h2>
+                <h2 class="latest_message">Great job!</h2>
             </div>
             <div class="latest_score">4/5</div>
         </section>
 
-        <ol class="score_list">
-            
-            <li class="score_item">
-                <span class="score-item_rank">1</span>
-                <div class="score-item_avatar">S</div>
-                <div class="score-item_info">
-                    <h3 class="score-item_category">Sports</h3>
-                    <p class="score-item_date">Oct 22</p>
-                </div>
-                <span class="score-item_badge">5/5</span>
-            </li>
-  
-            <li class="score_item">
-                <span class="score-item_rank">2</span>
-                <div class="score-item_avatar">L</div>
-                <div class="score-item_info">
-                    <h3 class="score-item_category">Sports</h3>
-                    <p class="score-item_date">Oct 22</p>
-                </div>
-                <span class="score-item_badge">5/5</span>
-            </li>
-  
-            <li class="score_item">
-                <span class="score-item_rank">3</span>
-                <div class="score-item_avatar">A</div>
-                <div class="score-item_info">
-                    <h3 class="score-item_category">Sports</h3>
-                    <p class="score-item_date">Oct 22</p>
-                </div>
-                <span class="score-item_badge">5/5</span>
-            </li>
+      <h2 class="visually-hidden">Your best rounds</h2>
 
-              
-            <li class="score_item">
-                <span class="score-item_rank">4</span>
-                <div class="score-item_avatar">B</div>
-                <div class="score-item_info">
-                    <h3 class="score-item_category">Sports</h3>
-                    <p class="score-item_date">Oct 22</p>
-                </div>
-                <span class="score-item_badge">5/5</span>
-            </li>
 
-        </ol>
 
         <a href="home.html" class="btn_primary">Play again</a>
     </main>
@@ -83,7 +46,7 @@
 
 
 
-<!-- // this code for footer dont tocuh /Abdul // --> 
+      <!-- // this code for footer dont touch /Abdul // -->
         <footer class="footer">
         <nav class="footer_nav">
             <ul class="footer_list">
@@ -97,7 +60,7 @@
 
                 <li>
                     <a href="scoreboard.html">
-                        <img src="/assets/footer-leaderboard-icon.png" alt="" width="36" height="36">
+                        <img src="/assets/footer-leaderboard-icon-blue.png" alt="" width="36" height="36">
                         <span class="footer_span">Scoreboard</span>
                     </a>
                 </li>
@@ -112,8 +75,9 @@
             </ul>
         </nav>
     </footer>
-<!-- // this code for footer dont tocuh /Abdul // -->
-<script src="/js/footer.js"></script>
+      <!-- // this code for footer dont touch /Abdul // -->
+
+<script type="module" src="../js/scoreboard.js"></script>
     
 </body>
 </html>
