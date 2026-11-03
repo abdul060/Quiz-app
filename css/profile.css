@@ -324,6 +324,11 @@ main{
 }
 /* this code is for footer dont touch /Abdul */
 
+button:focus-visible , a:focus-visible , input:focus-visible{
+    outline: 2px solid var(--headingColor);
+    outline-offset: 2px;
+}
+
 
 @media (max-width: 350px){
     .statsContainer{
