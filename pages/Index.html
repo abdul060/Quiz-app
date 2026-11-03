@@ -29,20 +29,22 @@
             <div class="InputsContainer">
                 <div class="UsernameInputcontainer">
                     <div class="iconBackground"><img src="/assets/person-icon-hd.png" alt=""></div>
-                    <input type="text" placeholder="Username or Email">
+                    <input type="text" placeholder="Username or Email" id="UsernameOrEmailInput">
                 </div>
+                    <p class="invalidcontent">Username or Email is incorrect</p>
                 <div class="PasswordInputcontainer">
                     <div class="iconBackground2"><img src="/assets/lock-icon-hd.png" alt=""></div>
-                    <input type="text" placeholder="Password">
+                    <input type="password" placeholder="Password" id="PasswordInput">
                 </div>
+                <p class="invalidcontent">Password is incorrect</p>
             </div>
             <div class="SubContainer">
                 <div class="RememberContainer">
-                    <input type="checkbox"> <p>Remember me</p>
+                    <input type="checkbox" id="RememberMeChecker"> <p>Remember me</p>
                 </div>
                 <p>Forgot password?</p>
             </div>
-            <button>Log in</button>
+            <button id="LogInButton">Log in</button>
         </div>
         <h3>Don`t have an account? <a href="Signup.html"><span>Sign up</span></a></h3>
         
@@ -76,5 +78,6 @@
         </nav>
     </footer>
 <!-- // this code for footer dont tocuh /Abdul // -->
+ <script src="/js/Function.js"></script>
 </body>
 </html>

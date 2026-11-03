@@ -218,6 +218,7 @@ h3{
     right: 0;
     padding: 0;
     margin: 0;
+    --main-font: "poppins", sans-serif;
 }
 .footer_nav{
     display: flex;

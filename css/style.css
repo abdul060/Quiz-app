@@ -18,6 +18,7 @@
     --lightBlue: #EEF3FF;
     --dividerLine: rgb(128, 128, 128 , 0.1);
     --sectionSignature: #C2255C;
+    --invalidInput: #C92A2A;
 }
 body{
     font-family: "Inter", sans-serif;
@@ -132,6 +133,21 @@ body{
         outline-offset: 2px;
         }
     }
+            .invalidcontent{
+        display: none;
+        &.activated{
+            display: block;
+            width: 90%;
+            height: 0;
+            position: relative;
+            bottom: 14px;
+            text-indent: 18%;
+            font-size: 12px;
+            line-height: 12px;
+            color: var(--invalidInput);
+            pointer-events: none;
+        }
+    }
     }
     button{
         width: 90%;
@@ -215,6 +231,7 @@ h3{
     right: 0;
     padding: 0;
     margin: 0;
+    --main-font: "poppins", sans-serif;
 }
 .footer_nav{
     display: flex;
