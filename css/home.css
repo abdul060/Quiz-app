@@ -1,4 +1,4 @@
-/* Grunden*/
+/* Root*/
 
 * {
     margin: 0;
@@ -8,14 +8,16 @@
 
 :root {
     --pink: #d6336c;
+    --pink-dark: #c2255c;
     --text-dark: #1b1d2a;
     --text-grey: #6b7080;
     --white: #ffffff;
+    --main-font: "Poppins", sans-serif;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: #f2f2f2;
+    font-family: var(--main-font);
+    background: var(--white);
     color: var(--text-dark);
 }
 
@@ -23,7 +25,6 @@ button {
     font-family: inherit;
     border: none;
     cursor: pointer;
-    width: 100%;
 }
 
 a{
@@ -37,7 +38,6 @@ a{
     margin: 0 auto;
     background: var(--white);
     padding: 60px 24px 120px;
-    overflow: hidden;
 }
 
 /* Header */
@@ -65,6 +65,12 @@ a{
 
 .bell-btn {
     padding-top: 8px;
+    border: none;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    cursor: pointer;
 }
 
 .bell-btn img {
@@ -83,6 +89,7 @@ a{
 
 .topic-card {
     position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -95,18 +102,19 @@ a{
     transition: transform 0.15s;
 }
 
-.topic-card:hover {
+.topic-card:hover, 
+.topic-card:focus-visible {
     transform: scale(1.02);
 }
 
 /* Colors for card */
 
 .topic-card--capital {
-    background: linear-gradient(135deg, #d6336c, #e8590c);
+    background: linear-gradient(135deg, #d6336c, #c4480a);
 }
 
 .topic-card--artists {
-    background: linear-gradient(135deg, #3b5bdb, #1c9fe0);
+    background: linear-gradient(135deg, #3b5bdb, #1971c2);
 }
 
 .topic-card--sport {
@@ -148,7 +156,7 @@ a{
     line-height: 1.1;
 }
 
-/* Vit cirkel med ikon */
+/* White circle with icon */
 
 .topic-card__icon {
     position: absolute;
@@ -164,13 +172,12 @@ a{
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Storlek på bild i den vita cirkeln */
+/* Size of image */
 .topic-card__icon img {
     width: 56px;
     height: 56px;
     object-fit: contain;
 }
-
 
 /* this code is for footer dont touch /Abdul */
 .footer{
@@ -200,6 +207,7 @@ a{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    
 }
 .footer_list li{
     list-style: none;
@@ -216,5 +224,45 @@ a{
     font-weight: 500;
     color: #6B7080;
     font-family: var(--main-font);
+}
+/* this code is for footer dont touch /Abdul */
+
+@media (min-width: 600px) {
+    .app {
+        max-width: 560px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .topics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 56px 32px;
+    }
+}
+
+@media (min-width: 900px) {
+    .app {
+        max-width: 860px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .app {
+        max-width: 1140px;
+        padding-top: 80px;
+    }
+
+    .header__title {
+        font-size: 44px;
+    }
+    
+    .topics {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .topic-card {
+        height: 160px;
+    }
 }
 /* this code is for footer dont touch /Abdul */

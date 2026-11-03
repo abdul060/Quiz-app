@@ -1,0 +1,106 @@
+{
+  "topic": "artists",
+  "difficulty": "medium",
+  "questions": [
+    {
+      "id": "artists-01",
+      "question": "What was Prince’s full name?",
+      "answers": [
+        {
+          "id": "rogers",
+          "text": "Prince Rogers Nelson"
+        },
+        {
+          "id": "roger",
+          "text": "Prince Roger Nelson"
+        },
+        {
+          "id": "robert",
+          "text": "Prince Robert Nelson"
+        }
+      ],
+      "correctAnswerId": "rogers",
+      "topic": "artists"
+    },
+    {
+      "id": "artists-02",
+      "question": "What was Avicii’s real name?",
+      "answers": [
+        {
+          "id": "bergling",
+          "text": "Tim Bergling"
+        },
+        {
+          "id": "berglund",
+          "text": "Tim Berglund"
+        },
+        {
+          "id": "bergman",
+          "text": "Tom Bergman"
+        }
+      ],
+      "correctAnswerId": "bergling",
+      "topic": "artists"
+    },
+    {
+      "id": "artists-03",
+      "question": "Which Swedish songwriter wrote Britney Spears’ “…Baby One More Time”?",
+      "answers": [
+        {
+          "id": "max-martin",
+          "text": "Max Martin"
+        },
+        {
+          "id": "shellback",
+          "text": "Shellback"
+        },
+        {
+          "id": "redone",
+          "text": "RedOne"
+        }
+      ],
+      "correctAnswerId": "max-martin",
+      "topic": "artists"
+    },
+    {
+      "id": "artists-04",
+      "question": "In which year was Michael Jackson’s album “Thriller” released?",
+      "answers": [
+        {
+          "id": "year-1982",
+          "text": "1982"
+        },
+        {
+          "id": "year-1979",
+          "text": "1979"
+        },
+        {
+          "id": "year-1984",
+          "text": "1984"
+        }
+      ],
+      "correctAnswerId": "year-1982",
+      "topic": "artists"
+    },
+    {
+      "id": "artists-05",
+      "question": "Which band’s debut album was called “Pablo Honey”?",
+      "answers": [
+        {
+          "id": "radiohead",
+          "text": "Radiohead"
+        },
+        {
+          "id": "coldplay",
+          "text": "Coldplay"
+        },
+        {
+          "id": "blur",
+          "text": "Blur"
+        }
+      ],
+      "correctAnswerId": "radiohead",
+      "topic": "artists"
+    }
+  ]
+}
