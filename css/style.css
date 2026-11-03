@@ -271,3 +271,80 @@ h3{
     font-family: var(--main-font);
 }
 /* this code is for footer dont touch /Abdul */
+
+@media (max-width: 350px){
+    .statsContainer{
+        width: 90%;
+    }
+}
+ 
+@media (min-width: 768px){
+    header{
+        height: 300px;
+    }
+    .YourNameContainer{
+        h1{
+            font-size: 40px;
+        }
+    }
+    .usernameContainer{
+        p{
+            font-size: 18px;
+        }
+    }
+    .statsContainer{
+        width: 440px;
+        .InputsContainer{
+            input{
+                font-size: 15px;
+            }
+        }
+ 
+    }
+    h3{
+        font-size: 14px;
+        span{
+            font-size: 14px;
+        }
+    }
+}
+ 
+@media (min-width: 1024px){
+    header{
+        height: 320px;
+    }
+    .YourNameContainer{
+        h1{
+            font-size: 44px;
+        }
+    }
+    .usernameContainer{
+        p{
+            font-size: 20px;
+        }
+    }
+    .statsContainer{
+        width: 520px;
+        .InputsContainer{
+            input{
+                font-size: 16px;
+            }
+        }
+        button{
+            font-size: 20px;
+        }
+    }
+    h3{
+        font-size: 16px;
+        span{
+            font-size: 16px;
+        }
+    }
+}
+ 
+@media (max-height: 900px){
+    body{
+        padding-bottom: 120px;
+    }
+}
+ 
