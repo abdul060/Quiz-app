@@ -161,6 +161,12 @@ a:focus-visible{
     background: linear-gradient(#7048E8, #5F3DC4);
 }
 
+.podium_item-me .podium_name{
+    padding: 0 10px;
+    border-radius: 999px;
+    background: #FFF3BF;
+}
+
 /* list */
 .player_list{
     list-style: none;

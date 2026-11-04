@@ -23,7 +23,7 @@ const renderPodium = ([first, second, third]) => {
     ];
 
     podiumList.innerHTML = places.map(({ player, place, rank }) => `
-        <li class="podium_item podium_item-${place}">
+        <li class="podium_item podium_item-${place} ${player.name === "You" ? "podium_item-me" : ""}">
             ${rank === 1 ? `<span class="podium_crown" aria-hidden="true">&#9819;</span>` : ""}
             <span class="podium_avatar">${player.name[0]}</span>
             <span class="podium_name">${player.name}</span>
