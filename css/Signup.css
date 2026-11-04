@@ -264,13 +264,13 @@ button:focus-visible , a:focus-visible , input:focus-visible{
     outline-offset: 2px;
 }
 
-@media (max-width: 350px){
+@media (min-width: 600px){
     .statsContainer{
         width: 90%;
     }
 }
  
-@media (min-width: 768px){
+@media (min-width: 900px){
     header{
         height: 300px;
     }
@@ -301,7 +301,7 @@ button:focus-visible , a:focus-visible , input:focus-visible{
     }
 }
  
-@media (min-width: 1024px){
+@media (min-width: 1200px){
     header{
         height: 320px;
     }
