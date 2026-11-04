@@ -7,7 +7,7 @@ export const TOPICS = {
     sports: { name: "Sports", next: "capitals"},
 };
 
-export const DEFALT_TOPIC = "capitals"; 
+export const DEFAULT_TOPIC = "capitals"; 
 
 // The adress of the questions for a topic 
 
