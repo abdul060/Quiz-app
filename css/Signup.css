@@ -194,14 +194,33 @@ body{
     }
 }
 
-
-
 @media (min-width: 600px){
+    .YourNameContainer{
+        h1{
+            font-size: 36px;
+        }
+    }
+    .usernameContainer{
+        p{
+            font-size: 17px;
+        }
+    }
     .statsContainer{
-        width: 90%;
+        width: 400px;
+        .InputsContainer{
+            input{
+                font-size: 14px;
+            }
+        }
+    }
+    .AccountPrompt{
+        font-size: 13px;
+        span{
+            font-size: 13px;
+        }
     }
 }
- 
+
 @media (min-width: 900px){
     header{
         height: 300px;
@@ -223,7 +242,6 @@ body{
                 font-size: 15px;
             }
         }
- 
     }
     .AccountPrompt{
         font-size: 14px;
@@ -232,7 +250,7 @@ body{
         }
     }
 }
- 
+
 @media (min-width: 1200px){
     header{
         height: 320px;
@@ -265,7 +283,7 @@ body{
         }
     }
 }
- 
+
 @media (max-height: 900px){
     body{
         padding-bottom: 120px;
