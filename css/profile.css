@@ -330,7 +330,7 @@ button:focus-visible , a:focus-visible , input:focus-visible{
 }
 
 
-@media (max-width: 350px){
+@media (min-width: 600px){
     .statsContainer{
         width: 90%;
         .statsChildren{
@@ -344,7 +344,7 @@ button:focus-visible , a:focus-visible , input:focus-visible{
     }
 }
  
-@media (min-width: 768px){
+@media (min-width: 900px){
     .YourNameContainer{
         h1{
             font-size: 38px;
@@ -385,7 +385,7 @@ button:focus-visible , a:focus-visible , input:focus-visible{
     }
 }
  
-@media (min-width: 1024px){
+@media (min-width: 1200px){
     .YourNameContainer{
         h1{
             font-size: 44px;
