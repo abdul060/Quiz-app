@@ -97,7 +97,7 @@ body{
     align-items: center;
     position: relative;
     bottom: 30px;
-    .InputsContainer{
+        .InputsContainer{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -122,6 +122,21 @@ body{
          &:focus{
         outline: 1px solid var(--headingColor);
         outline-offset: 2px;
+        }
+    }
+        .invalidcontent{
+        display: none;
+        &.activated{
+            display: block;
+            width: 90%;
+            height: 0;
+            position: relative;
+            bottom: 14px;
+            text-indent: 18%;
+            font-size: 12px;
+            line-height: 12px;
+            color: var(--invalidInput);
+            pointer-events: none;
         }
     }
     }
@@ -175,6 +190,9 @@ body{
             font-size: 12px;
             color: var(--textColor);
             margin-left: 5px;
+            &.activated{
+                color: var(--invalidInput);
+            }
         }
     }
 }
