@@ -56,6 +56,7 @@ Wireframes
 
 Figma design
 ![Figma](assets/figmasketches.png)
+[Open the design in figma](https://www.figma.com/design/JSbaypCY8vyrupchz2BVmP/Quiz-app---uo3?node-id=254-292)
 
 Data model
 { 
