@@ -22,7 +22,11 @@ const resultsLink = document.getElementById("results-link");
 const CIRCLE_LENGTH = 150.8;
 const TIME_LIMIT = 120;
 const topic = new URLSearchParams(location.search).get("topic") ?? "capitals";
-const topicNames = { capitals: "Capitals", artists: "Artists", sports: "Sports" };
+const topicNames = {
+  capitals: "Capitals",
+  artists: "Artists",
+  sports: "Sports",
+};
 let questions = [];
 let currentIndex = 0;
 let score = 0;
@@ -46,7 +50,8 @@ async function loadQuiz() {
     answerList.replaceChildren();
     questionCategory.textContent = "Quiz";
     questionTitle.textContent = "Quiz unavailable";
-    feedback.textContent = "We couldn't load this quiz. Try again or choose a topic on the home page.";
+    feedback.textContent =
+      "We couldn't load this quiz. Try again or choose a topic on the home page.";
     retryButton.textContent = "Try again";
     retryButton.hidden = false;
     retryButton.disabled = false;
