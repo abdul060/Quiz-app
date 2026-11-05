@@ -10,7 +10,7 @@ See [Questions documentation](docs/questions.md) for the data model, responsive 
 Quiz app
 A quiz app built with vanilla JavaScript, HTML and CSS. Users choose a topic, answer questions within a time limit and see their results.
 
-Live app: [Link]
+Live app: [https://bucolic-heliotrope-3cc57f.netlify.app]
 
 Team
 
