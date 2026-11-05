@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-:root{
-
-}
-
 header{
     width: 100%;
     height: 273px;
@@ -276,8 +272,46 @@ main{
         }
     }
 }
- 
-@media (min-width: 768px){
+
+@media (min-width: 600px){
+    .YourNameContainer{
+        h1{
+            font-size: 36px;
+        }
+    }
+    .usernameContainer{
+        p{
+            font-size: 17px;
+        }
+    }
+    .statsContainer{
+        width: 400px;
+        .statsChildren{
+            strong{
+                font-size: 26px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+    main{
+        .TitleContainer{
+            width: 360px;
+        }
+        .subseciton{
+            width: 360px;
+        }
+        .dividerLine{
+            width: 360px;
+        }
+        #LogOut{
+            width: 360px;
+        }
+    }
+}
+
+@media (min-width: 900px){
     .YourNameContainer{
         h1{
             font-size: 38px;
@@ -317,8 +351,8 @@ main{
         }
     }
 }
- 
-@media (min-width: 1024px){
+
+@media (min-width: 1200px){
     .YourNameContainer{
         h1{
             font-size: 44px;
@@ -358,10 +392,9 @@ main{
         }
     }
 }
- 
+
 @media (max-height: 900px){
     body{
         padding-bottom: 190px;
     }
 }
- 

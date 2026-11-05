@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>Log in | Quiz App</title>
 </head>
 <body>
@@ -26,18 +26,18 @@
             <p>Log in to keep playing!</p>
         </div>
     </header>
-     <form class="statsContainer" aria-label="Log in">
+     <form class="statsContainer" id="LoginForm" aria-label="Log in">
             <div class="InputsContainer">
                 <div class="UsernameInputcontainer">
                     <div class="iconBackground"><img src="/assets/person-icon-hd.png" alt=""></div>
                     <input type="text" placeholder="Username or Email" id="UsernameOrEmailInput" aria-label="Username or Email">
                 </div>
-                    <p class="invalidcontent">Username or Email is incorrect</p>
+                    <p class="invalidcontent" id="UsernameError" role="alert">Username or Email is incorrect</p>
                 <div class="PasswordInputcontainer">
                     <div class="iconBackground2"><img src="/assets/lock-icon-hd.png" alt=""></div>
                     <input type="password" placeholder="Password" id="PasswordInput" aria-label="Password">
                 </div>
-                <p class="invalidcontent">Password is incorrect</p>
+                <p class="invalidcontent" id="PasswordError" role="alert">Password is incorrect</p>
             </div>
             <div class="SubContainer">
                 <div class="RememberContainer">
@@ -45,11 +45,11 @@
                 </div>
                 <p>Forgot password?</p>
             </div>
-            <button type="button" id="LogInButton">Log in</button>
+            <button type="submit" id="LogInButton">Log in</button>
         </form>
         <p class="AccountPrompt">Don't have an account? <a href="Signup.html"><span>Sign up</span></a></p>
         
-      <!-- // this code for footer dont touch /Abdul // -->
+        <!-- // this code for footer dont tocuh /Abdul // -->
     <footer class="footer">
         <nav class="footer_nav">
             <ul class="footer_list">
@@ -70,7 +70,7 @@
 
                 <li>
                     <a href="profile.html">
-                        <img src="/assets/footer-profile-icon-blue.png" alt="" width="36" height="36">
+                        <img src="/assets/footer-profile-icon.png" alt="" width="36" height="36">
                         <span class="footer_span">Profile</span>
                     </a>
                 </li>
@@ -78,7 +78,7 @@
             </ul>
         </nav>
     </footer>
-      <!-- // this code for footer dont touch /Abdul // -->
- <script src="/js/Function.js"></script>
+<!-- // this code for footer dont tocuh /Abdul // -->
+ <script type="module" src="../js/account/login.js"></script>
 </body>
 </html>

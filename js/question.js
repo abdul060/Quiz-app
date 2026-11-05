@@ -4,8 +4,6 @@ import { startTimer, stopTimer, getTimeLeft } from "./quizTimer.js";
 const quizMain = document.querySelector(".quiz-main");
 const questionPicture = document.getElementById("question-picture");
 const questionImage = document.getElementById("question-image");
-const photoAuthor = document.getElementById("photo-author");
-const photoLicense = document.getElementById("photo-license");
 const questionCategory = document.getElementById("question-category");
 const questionTitle = document.getElementById("question-title");
 const answerList = document.getElementById("answer-list");
@@ -87,13 +85,9 @@ function showQuestion() {
   questionPicture.hidden = !question.image;
   quizMain.classList.toggle("quiz-main--text-only", !question.image);
   if (question.image) {
-    const { src, alt, author, authorUrl, license, licenseUrl } = question.image;
+    const { src, alt } = question.image;
     questionImage.src = src;
     questionImage.alt = alt;
-    photoAuthor.textContent = author;
-    photoAuthor.href = authorUrl;
-    photoLicense.textContent = license;
-    photoLicense.href = licenseUrl;
   }
   questionTitle.textContent = question.question;
   answerList.replaceChildren();

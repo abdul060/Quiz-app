@@ -1,4 +1,5 @@
 # Quiz-app
+<<<<<<< HEAD
 
 ## Questions view
 
@@ -105,3 +106,5 @@ Abdul Rahman Al Hanbali
 
 Gogita Nikabadze
 
+=======
+>>>>>>> 2bee179c1224804e210e46bd3c710aa9abdb8343
