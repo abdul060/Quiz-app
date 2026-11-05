@@ -1,6 +1,6 @@
 {
   "topic": "artists",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "questions": [
     {
       "id": "artists-01",
@@ -19,8 +19,7 @@
           "text": "Prince Robert Nelson"
         }
       ],
-      "correctAnswerId": "rogers",
-      "topic": "artists"
+      "correctAnswerId": "rogers"
     },
     {
       "id": "artists-02",
@@ -39,8 +38,7 @@
           "text": "Tom Bergman"
         }
       ],
-      "correctAnswerId": "bergling",
-      "topic": "artists"
+      "correctAnswerId": "bergling"
     },
     {
       "id": "artists-03",
@@ -59,8 +57,7 @@
           "text": "RedOne"
         }
       ],
-      "correctAnswerId": "max-martin",
-      "topic": "artists"
+      "correctAnswerId": "max-martin"
     },
     {
       "id": "artists-04",
@@ -79,8 +76,7 @@
           "text": "1984"
         }
       ],
-      "correctAnswerId": "year-1982",
-      "topic": "artists"
+      "correctAnswerId": "year-1982"
     },
     {
       "id": "artists-05",
@@ -99,8 +95,7 @@
           "text": "Blur"
         }
       ],
-      "correctAnswerId": "radiohead",
-      "topic": "artists"
+      "correctAnswerId": "radiohead"
     }
   ]
 }
