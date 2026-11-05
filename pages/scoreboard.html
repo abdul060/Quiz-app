@@ -1,84 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/scoreboard.css">
-    <link rel="stylesheet" href="../css/main.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../assets/questions/quiz-icon.svg"
+      type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/scoreboard.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
     <title>Scoreboard - Quiz App</title>
-    
-</head>
-<body>
+  </head>
+  <body>
     <main class="scoreboard">
+      <header class="scoreboard_header">
+        <h1 class="scoreboard_title">Scoreboard</h1>
+        <p class="scoreboard_subtitle">Your best rounds so far</p>
+      </header>
 
-        <header class="scoreboard_header">
-            <h1 class="scoreboard_title">Scoreboard</h1>
-            <p class="scoreboard_subtitle">Your best rounds so far</p>
-        </header>
-
-
-        <nav class="tabs" aria-label="Scores">
-        <a href="scoreboard.html" class="tabs_btn tabs_btn-active" aria-current="page">My scores</a>
+      <nav class="tabs" aria-label="Scores">
+        <a
+          href="scoreboard.html"
+          class="tabs_btn tabs_btn-active"
+          aria-current="page"
+          >My scores</a
+        >
         <a href="leaderboard.html" class="tabs_btn">Leaderboard</a>
-        </nav>
+      </nav>
 
-
-        <section class="latest">
-            <div class="latest_text">
-                <p class="latest_label">No rounds yet</p>
-                <h2 class="latest_message">Play your first quiz!</h2>
-            </div>
-            <div class="latest_score">-</div>
-        </section>
+      <section class="latest">
+        <div class="latest_text">
+          <p class="latest_label">No rounds yet</p>
+          <h2 class="latest_message">Play your first quiz!</h2>
+        </div>
+        <div class="latest_score">-</div>
+      </section>
 
       <h2 id="best-title" class="visually-hidden">Your best rounds</h2>
       <ol class="score_list"></ol>
 
-
-
-        <a href="home.html" class="btn_primary">Play again</a>
+      <a href="home.html" class="btn_primary">Play again</a>
     </main>
 
+    <!-- // this code for footer dont touch /Abdul // -->
+    <footer class="footer">
+      <nav class="footer_nav">
+        <ul class="footer_list">
+          <li>
+            <a href="home.html">
+              <img
+                src="../assets/footer-home-icon.png"
+                alt=""
+                width="36"
+                height="36" />
+              <span class="footer_span">Home</span>
+            </a>
+          </li>
 
+          <li>
+            <a href="scoreboard.html">
+              <img
+                src="../assets/footer-leaderboard-icon-blue.png"
+                alt=""
+                width="36"
+                height="36" />
+              <span class="footer_span">Scoreboard</span>
+            </a>
+          </li>
 
-
-      <!-- // this code for footer dont touch /Abdul // -->
-        <footer class="footer">
-        <nav class="footer_nav">
-            <ul class="footer_list">
-
-                <li>
-                    <a href="home.html">
-                        <img src="../assets/footer-home-icon.png" alt="" width="36" height="36">
-                        <span class="footer_span">Home</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="scoreboard.html">
-                        <img src="../assets/footer-leaderboard-icon-blue.png" alt="" width="36" height="36">
-                        <span class="footer_span">Scoreboard</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="profile.html">
-                        <img src="../assets/footer-profile-icon.png" alt="" width="36" height="36">
-                        <span class="footer_span">Profile</span>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
+          <li>
+            <a href="profile.html">
+              <img
+                src="../assets/footer-profile-icon.png"
+                alt=""
+                width="36"
+                height="36" />
+              <span class="footer_span">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
-      <!-- // this code for footer dont touch /Abdul // -->
+    <!-- // this code for footer dont touch /Abdul // -->
 
-<script type="module" src="../js/scoreboard.js"></script>
-    
-</body>
+    <script type="module" src="../js/scoreboard.js"></script>
+  </body>
 </html>
