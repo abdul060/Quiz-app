@@ -1,4 +1,6 @@
 import { saveScore } from "./Storage.js";
+import { saveGameResult } from "./account/userStorage.js";
+import { TOPICS } from "./Topics.js";
 import { loadQuestions } from "./quizData.js";
 import { startTimer, stopTimer, getTimeLeft } from "./quizTimer.js";
 const quizMain = document.querySelector(".quiz-main");
@@ -22,7 +24,6 @@ const resultsLink = document.getElementById("results-link");
 const CIRCLE_LENGTH = 150.8;
 const TIME_LIMIT = 120;
 const topic = new URLSearchParams(location.search).get("topic") ?? "capitals";
-const topicNames = { capitals: "Capitals", artists: "Artists", sports: "Sports" };
 let questions = [];
 let currentIndex = 0;
 let score = 0;
@@ -37,7 +38,7 @@ async function loadQuiz() {
   questionTitle.textContent = "Loading question…";
   try {
     questions = await loadQuestions(topic);
-    document.title = `${topicNames[topic]} - Quiz`;
+    document.title = `${TOPICS[topic].name} - Quiz`;
     showQuestion();
     startTimer(TIME_LIMIT, updateTimer);
   } catch {
@@ -79,7 +80,7 @@ function showQuestion() {
   feedback.textContent = "";
   questionNumber.textContent = number;
   questionTotal.textContent = total;
-  questionCategory.textContent = `${topicNames[topic]} · Question ${number} of ${total}`;
+  questionCategory.textContent = `${TOPICS[topic].name} · Question ${number} of ${total}`;
   questionProgress.setAttribute("aria-label", `Question ${number} of ${total}`);
   progressCircle.style.strokeDasharray = `${(number / total) * CIRCLE_LENGTH} ${CIRCLE_LENGTH}`;
   questionPicture.hidden = !question.image;
@@ -170,6 +171,7 @@ function saveResult() {
   retryButton.disabled = true;
   try {
     saveScore({ topic, score, total: questions.length });
+    saveGameResult(score);
   } catch {
     questionTitle.textContent = "Quiz finished";
     feedback.textContent = `You scored ${score} out of ${questions.length}. Your result couldn't be saved. Allow browser storage, then try saving again.`;
