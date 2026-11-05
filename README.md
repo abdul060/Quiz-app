@@ -59,27 +59,36 @@ Figma design
 [Open the design in figma](https://www.figma.com/design/JSbaypCY8vyrupchz2BVmP/Quiz-app---uo3?node-id=254-292)
 
 Data model
-{ 
-"topic": "capitals", 
-"difficulty": "easy", 
-"questions": [ 
-{ "id": 1, 
-"question": "Which capital city is this?", 
-"image": {
- "src": "../assets/questions/stockholm.jpg", 
-"alt": "A waterfront lined with pastel-coloured historic buildings and steep red roofs.", "author": "OleNeitzel", 
-"authorUrl": "https://commons.wikimedia.org/wiki/User:OleNeitzel", 
-"license": "CC BY 4.0", 
-"licenseUrl": "https://creativecommons.org/licenses/by/4.0/" }, 
-"answers": [ 
-{ "id": "stockholm", "text": "Stockholm" }, 
-{ "id": "copenhagen", "text": "Copenhagen" }, 
-{ "id": "oslo", "text": "Oslo" } ], 
-"correctAnswerId": "stockholm", 
-"topic": "capitals" } 
-] 
+## Data model
+
+```json
+{
+  "topic": "capitals",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which capital city is this?",
+      "image": {
+        "src": "../assets/questions/stockholm.jpg",
+        "alt": "A waterfront lined with pastel-coloured historic buildings and steep red roofs.",
+        "author": "OleNeitzel",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:OleNeitzel",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "answers": [
+        { "id": "stockholm", "text": "Stockholm" },
+        { "id": "copenhagen", "text": "Copenhagen" },
+        { "id": "oslo", "text": "Oslo" }
+      ],
+      "correctAnswerId": "stockholm",
+      "topic": "capitals"
+    }
+  ]
 }
- 
+```
+
 Reflection
 
 Strengths
