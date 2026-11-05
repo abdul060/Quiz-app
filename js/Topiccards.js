@@ -5,14 +5,14 @@ import { getQuizUrl } from "./Topics.js";
 
 // When a card is clicked, remember the topic and go to the questions page
 export const setupTopicCards = () => {
-    const cards = document.querySelectorAll(".topic-card");
+  const cards = document.querySelectorAll(".topic-card");
 
-    cards.forEach((card) => {
-        card.addEventListener("click", () => {
-            const { topic } = card.dataset; //destructuring 
-            
-            saveSelectedTopic(topic);
-            window.location.href = getQuizUrl(topic);
-        });
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const { topic } = card.dataset; //destructuring
+
+      saveSelectedTopic(topic);
+      window.location.href = getQuizUrl(topic);
     });
+  });
 };

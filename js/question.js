@@ -47,7 +47,8 @@ async function loadQuiz() {
     answerList.replaceChildren();
     questionCategory.textContent = "Quiz";
     questionTitle.textContent = "Quiz unavailable";
-    feedback.textContent = "We couldn't load this quiz. Try again or choose a topic on the home page.";
+    feedback.textContent =
+      "We couldn't load this quiz. Try again or choose a topic on the home page.";
     retryButton.textContent = "Try again";
     retryButton.hidden = false;
     retryButton.disabled = false;
