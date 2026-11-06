@@ -1,6 +1,6 @@
 {
   "topic": "sports",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "questions": [
     {
       "id": "sports-01",
@@ -19,8 +19,7 @@
           "text": "12"
         }
       ],
-      "correctAnswerId": "eleven",
-      "topic": "sports"
+      "correctAnswerId": "eleven"
     },
     {
       "id": "sports-02",
@@ -39,8 +38,7 @@
           "text": "6"
         }
       ],
-      "correctAnswerId": "five",
-      "topic": "sports"
+      "correctAnswerId": "five"
     },
     {
       "id": "sports-03",
@@ -59,8 +57,7 @@
           "text": "7"
         }
       ],
-      "correctAnswerId": "six",
-      "topic": "sports"
+      "correctAnswerId": "six"
     },
     {
       "id": "sports-04",
@@ -79,8 +76,7 @@
           "text": "45 km"
         }
       ],
-      "correctAnswerId": "full-distance",
-      "topic": "sports"
+      "correctAnswerId": "full-distance"
     },
     {
       "id": "sports-05",
@@ -99,8 +95,7 @@
           "text": "Mats Wilander"
         }
       ],
-      "correctAnswerId": "borg",
-      "topic": "sports"
+      "correctAnswerId": "borg"
     }
   ]
 }
