@@ -1,27 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Your Quiz App profile: view your stats and manage your settings." />
-    <link rel="stylesheet" href="/css/profile.css" />
-    <link
-      rel="icon"
-      href="../assets/questions/quiz-icon.svg"
-      type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="/css/main.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Quiz App profile: view your stats and manage your settings.">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Profile | Quiz App</title>
   </head>
   <body>
@@ -59,93 +50,71 @@
       </div>
     </header>
     <main>
-      <div class="TitleContainer">
-        <h2>Settings</h2>
-      </div>
-      <div class="subseciton">
-        <div class="leftSideContent">
-          <div class="iconBackground">
-            <img src="/assets/pencile-icon.png" alt="" />
-          </div>
-          <strong>Edit profile</strong>
+        <div class="TitleContainer">
+            <h2>Settings</h2>
         </div>
-      </div>
-      <hr class="dividerLine" />
-      <div class="subseciton">
-        <div class="leftSideContent">
-          <div class="iconBackground2"><span aria-hidden="true">N</span></div>
-          <strong id="notificationsLabel">Notifications</strong>
+        <div class="subseciton">
+            <div class="leftSideContent">
+                <div class="iconBackground"><img src="../assets/pencile-icon.png" alt=""></div>
+                <strong>Edit profile</strong>
+            </div>
         </div>
-        <div class="rightSideContent">
-          <button
-            id="buttonBackground"
-            type="button"
-            role="switch"
-            aria-checked="true"
-            aria-labelledby="notificationsLabel">
-            <span aria-hidden="true"></span>
-          </button>
+        <hr class="dividerLine">
+        <div class="subseciton">
+            <div class="leftSideContent">
+                <div class="iconBackground2"><span aria-hidden="true">N</span></div>
+                <strong id="notificationsLabel">Notifications</strong>
+            </div>
+            <div class="rightSideContent">
+                <button id="buttonBackground" type="button" role="switch" aria-checked="true" aria-labelledby="notificationsLabel">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
-      </div>
-      <hr class="dividerLine" />
-      <div class="subseciton">
-        <div class="leftSideContent">
-          <div class="iconBackground2"><span aria-hidden="true">S</span></div>
-          <strong id="soundLabel">Sound effects</strong>
+        <hr class="dividerLine">
+        <div class="subseciton">
+            <div class="leftSideContent">
+                <div class="iconBackground2"><span aria-hidden="true">S</span></div>
+                <strong id="soundLabel">Sound effects</strong>
+            </div>
+            <div class="rightSideContent">
+                <button id="buttonBackground2" type="button" role="switch" aria-checked="false" aria-labelledby="soundLabel">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
-        <div class="rightSideContent">
-          <button
-            id="buttonBackground2"
-            type="button"
-            role="switch"
-            aria-checked="false"
-            aria-labelledby="soundLabel">
-            <span aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-      <hr class="dividerLine" />
-      <button id="LogOut" type="button">Log out</button>
+        <hr class="dividerLine">
+       <button id="LogOut" type="button">Log out</button>
     </main>
 
     <!-- // this code for footer dont tocuh /Abdul // -->
     <footer class="footer">
-      <nav class="footer_nav">
-        <ul class="footer_list">
-          <li>
-            <a href="home.html">
-              <img
-                src="/assets/footer-home-icon.png"
-                alt=""
-                width="36"
-                height="36" />
-              <span class="footer_span">Home</span>
-            </a>
-          </li>
+        <nav class="footer_nav">
+            <ul class="footer_list">
 
-          <li>
-            <a href="scoreboard.html">
-              <img
-                src="/assets/footer-leaderboard-icon.png"
-                alt=""
-                width="36"
-                height="36" />
-              <span class="footer_span">Scoreboard</span>
-            </a>
-          </li>
+                <li>
+                    <a href="home.html">
+                        <img src="../assets/footer-home-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Home</span>
+                    </a>
+                </li>
 
-          <li>
-            <a href="profile.html">
-              <img
-                src="/assets/footer-profile-icon.png"
-                alt=""
-                width="36"
-                height="36" />
-              <span class="footer_span">Profile</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+                <li>
+                    <a href="scoreboard.html">
+                        <img src="../assets/footer-leaderboard-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Scoreboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <img src="../assets/footer-profile-icon.png" alt="" width="36" height="36">
+                        <span class="footer_span">Profile</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
     </footer>
     <!-- // this code for footer dont tocuh /Abdul // -->
     <script type="module" src="../js/account/profile.js"></script>
