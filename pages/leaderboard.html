@@ -1,78 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/leaderboard.css">
-    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="../css/leaderboard.css" />
+    <link
+      rel="icon"
+      href="../assets/questions/quiz-icon.svg"
+      type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/main.css" />
     <title>Leaderboard - Quiz App</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="leaderboard">
+      <header class="leaderboard_header">
+        <h1 class="leaderboard_title">Leaderboard</h1>
+        <p class="leaderboard_subtitle">Top players this week</p>
+      </header>
 
-        <header class="leaderboard_header">
-            <h1 class="leaderboard_title">Leaderboard</h1>
-            <p class="leaderboard_subtitle">Top players this week</p>
-        </header>
+      <nav class="tabs" aria-label="Scores">
+        <a href="scoreboard.html" class="tabs_btn">My scores</a>
+        <a
+          href="leaderboard.html"
+          class="tabs_btn tabs_btn-active"
+          aria-current="page"
+          >Leaderboard</a
+        >
+      </nav>
 
-        <nav class="tabs" aria-label="Scores">
-            <a href="scoreboard.html" class="tabs_btn">My scores</a>
-            <a href="leaderboard.html" class="tabs_btn tabs_btn-active" aria-current="page">Leaderboard</a>
-        </nav>
+      <div class="leaderboard_content">
+        <section class="podium" aria-labelledby="podium-title">
+          <h2 id="podium-title" class="visually-hidden">Top 3 players</h2>
+          <ol class="podium_list"></ol>
+        </section>
 
-        <div class="leaderboard_content">
-            <section class="podium" aria-labelledby="podium-title">
-                <h2 id="podium-title" class="visually-hidden">Top 3 players</h2>
-                <ol class="podium_list">
-                </ol>
-            </section>
-
-            <section aria-labelledby="players-title">
-                <h2 id="players-title" class="visually-hidden">Other players</h2>
-                <ol class="player_list" start="4">
-                </ol>
-            </section>
-        </div>
+        <section aria-labelledby="players-title">
+          <h2 id="players-title" class="visually-hidden">Other players</h2>
+          <ol class="player_list" start="4"></ol>
+        </section>
+      </div>
     </main>
 
+    <!-- // this code for footer dont touch /Abdul // -->
+    <footer class="footer">
+      <nav class="footer_nav">
+        <ul class="footer_list">
+          <li>
+            <a href="home.html">
+              <img
+                src="../assets/footer-home-icon.png"
+                alt=""
+                width="36"
+                height="36" />
+              <span class="footer_span">Home</span>
+            </a>
+          </li>
 
+          <li>
+            <a href="scoreboard.html">
+              <img
+                src="../assets/footer-leaderboard-icon-blue.png"
+                alt=""
+                width="36"
+                height="36" />
+              <span class="footer_span">Scoreboard</span>
+            </a>
+          </li>
 
-
-      <!-- // this code for footer dont touch /Abdul // -->
-        <footer class="footer">
-        <nav class="footer_nav">
-            <ul class="footer_list">
-
-                <li>
-                    <a href="home.html">
-                        <img src="../assets/footer-home-icon.png" alt="" width="36" height="36">
-                        <span class="footer_span">Home</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="scoreboard.html">
-                        <img src="../assets/footer-leaderboard-icon-blue.png" alt="" width="36" height="36">
-                        <span class="footer_span">Scoreboard</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="profile.html">
-                        <img src="../assets/footer-profile-icon.png" alt="" width="36" height="36">
-                        <span class="footer_span">Profile</span>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
+          <li>
+            <a href="profile.html">
+              <img
+                src="../assets/footer-profile-icon.png"
+                alt=""
+                width="36"
+                height="36" />
+              <span class="footer_span">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
-      <!-- // this code for footer dont touch /Abdul // -->
+    <!-- // this code for footer dont touch /Abdul // -->
 
     <script type="module" src="../js/leaderboard.js"></script>
-</body>
+  </body>
 </html>

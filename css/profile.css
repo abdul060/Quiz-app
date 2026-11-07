@@ -1,18 +1,18 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-header{
-    width: 100%;
-    height: 273px;
-    background: var(--lineargradient);
-    border-bottom-left-radius: 27px;
-    border-bottom-right-radius: 27px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+header {
+  width: 100%;
+  height: 273px;
+  background: var(--lineargradient);
+  border-bottom-left-radius: 27px;
+  border-bottom-right-radius: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 body{
     font-family: var(--main-font);
@@ -22,74 +22,74 @@ button, input{
        font-family: inherit;
    }
 
-.logocontainer{
-    width: 100%;
-    height: 40%;
+.logocontainer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 35px;
+  .logofirstbackground {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: var(--logofirstbackgroundcolor);
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 35px;
-    .logofirstbackground{
-        width: 104px;
-        height: 104px;
-        border-radius: 50%;
-        background-color: var(--logofirstbackgroundcolor);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .logosecondbackground{
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            background: var(--logosecondbackgroundcolor);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .LogoSignature{
-                font-size: 48px;
-                font-weight: bold;
-                color: var(--logofirstbackgroundcolor);
-            }
-        }
-    }
-}
-
-.YourNameContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 25px;
-    h1{
-        font-size: 32px;
-        color: var(--logofirstbackgroundcolor);
-    }
-}
-
-.usernameContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 25px;
-    p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
+    align-items: center;
+    .logosecondbackground {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--logosecondbackgroundcolor);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .LogoSignature {
+        font-size: 48px;
         font-weight: bold;
         color: var(--logofirstbackgroundcolor);
-        span{
-            width: 4px;
-            height: 4px;
-            margin-left: 5px;
-            margin-right: 5px;
-            background-color: var(--logofirstbackgroundcolor);
-            border-radius: 27px;
-        }
+      }
     }
+  }
+}
+
+.YourNameContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 25px;
+  h1 {
+    font-size: 32px;
+    color: var(--logofirstbackgroundcolor);
+  }
+}
+
+.usernameContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 25px;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--logofirstbackgroundcolor);
+    span {
+      width: 4px;
+      height: 4px;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-color: var(--logofirstbackgroundcolor);
+      border-radius: 27px;
+    }
+  }
 }
 
 .statsContainer{
@@ -126,280 +126,280 @@ button, input{
     }
 }
 
-main{
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 50px;
+main {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .TitleContainer {
+    width: 80%;
+    h2 {
+      font-size: 24px;
+    }
+  }
+  .subseciton {
+    margin-top: 10px;
+    width: 80%;
+    height: 4rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    .TitleContainer{
-        width: 80%;
-        h2{
-            font-size: 24px;
-        }
-    }
-    .subseciton{
-        margin-top: 10px;
-        width: 80%;
-        height: 4rem;
+    justify-content: space-between;
+    .leftSideContent {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .iconBackground,
+      .iconBackground2 {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: var(--lightBlue);
+      }
+      .iconBackground {
         display: flex;
-        justify-content: space-between;
-        .leftSideContent{
-            width: 50%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            .iconBackground , .iconBackground2{
-                width: 40px;
-                height: 40px;
-                border-radius: 8px;
-                background-color: var(--lightBlue);
-            }
-            .iconBackground{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .iconBackground2{
-                background-color: var(--lightSecondHeadingColor);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                span{
-                    font-size: 16px;
-                    color: var(--sectionSignature);
-                }
-            }
-            strong{
-                position: relative;
-                left: 10px;
-                font-size: 16px;
-            }
+        justify-content: center;
+        align-items: center;
+      }
+      .iconBackground2 {
+        background-color: var(--lightSecondHeadingColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 16px;
+          color: var(--sectionSignature);
         }
-        .rightSideContent{
-            width: 50%;
-            height: 100%;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            #buttonBackground , #buttonBackground2{
-                width: 47px;
-                height: 30px;
-                border-radius: 18px;
-                background-color: var(--headingColor);
-                border: none;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                cursor: pointer;
-                &.activated{
-                    background-color: var(--buttonBackgroundColor);
-                    }
-                span{
-                    width: 22px;
-                    height: 24px;
-                    border-radius: 50%;
-                    background-color: var(--logofirstbackgroundcolor);
-                    border: none;
-                    position: relative;
-                    right: 2px;
-                    transition: 0.3s ease;
-                    &.activated{
-                    transform: translateX(0px);
-                    }
-                    &.disabled{
-                    transform: translateX(-21px);
-                    }
-                }
-            }
-            #buttonBackground2{
-                display: flex;
-                justify-content: start;
-                background-color: var(--buttonBackgroundColor);
-                &.activated{
-                    background-color: var(--headingColor);
-                }
-                span{
-                    right: 0;
-                    left: 2px;
-                    &.activated{
-                    transform: translateX(0px);
-                    }
-                    &.disabled{
-                    transform: translateX(21px);
-                    }
-                }
-            }
-        }
-    }
-    .dividerLine{
-        width: 80%;
-        height: 2px;
-        background-color: var(--dividerLine);
-        border: none;
-    }
-    #LogOut{
-        transition: 0.3s ease;
+      }
+      strong {
         position: relative;
-        top: 20px;
-        width: 80%;
-        height: 58px;
-        background-color: transparent;
-        border: var(--lightSecondHeadingColor) 3px solid;
-        border-radius: 17px;
-        font-size: 17px;
-        color: var(--sectionSignature);
-        font-weight: 700;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
+        left: 10px;
+        font-size: 16px;
+      }
     }
-    #LogOut:hover{
-        background-color: var(--sectionSignature);
-        color: var(--logofirstbackgroundcolor);
+    .rightSideContent {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      #buttonBackground,
+      #buttonBackground2 {
+        width: 47px;
+        height: 30px;
+        border-radius: 18px;
+        background-color: var(--headingColor);
         border: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+        &.activated {
+          background-color: var(--buttonBackgroundColor);
+        }
+        span {
+          width: 22px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: var(--logofirstbackgroundcolor);
+          border: none;
+          position: relative;
+          right: 2px;
+          transition: 0.3s ease;
+          &.activated {
+            transform: translateX(0px);
+          }
+          &.disabled {
+            transform: translateX(-21px);
+          }
+        }
+      }
+      #buttonBackground2 {
+        display: flex;
+        justify-content: start;
+        background-color: var(--buttonBackgroundColor);
+        &.activated {
+          background-color: var(--headingColor);
+        }
+        span {
+          right: 0;
+          left: 2px;
+          &.activated {
+            transform: translateX(0px);
+          }
+          &.disabled {
+            transform: translateX(21px);
+          }
+        }
+      }
     }
+  }
+  .dividerLine {
+    width: 80%;
+    height: 2px;
+    background-color: var(--dividerLine);
+    border: none;
+  }
+  #LogOut {
+    transition: 0.3s ease;
+    position: relative;
+    top: 20px;
+    width: 80%;
+    height: 58px;
+    background-color: transparent;
+    border: var(--lightSecondHeadingColor) 3px solid;
+    border-radius: 17px;
+    font-size: 17px;
+    color: var(--sectionSignature);
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #LogOut:hover {
+    background-color: var(--sectionSignature);
+    color: var(--logofirstbackgroundcolor);
+    border: none;
+  }
 }
 
-
-
-@media (max-width: 350px){
-    .statsContainer{
-        width: 90%;
-        .statsChildren{
-            strong{
-                font-size: 20px;
-            }
-            p{
-                font-size: 11px;
-            }
-        }
+@media (max-width: 350px) {
+  .statsContainer {
+    width: 90%;
+    .statsChildren {
+      strong {
+        font-size: 20px;
+      }
+      p {
+        font-size: 11px;
+      }
     }
+  }
 }
 
-@media (min-width: 600px){
-    .YourNameContainer{
-        h1{
-            font-size: 36px;
-        }
+@media (min-width: 600px) {
+  .YourNameContainer {
+    h1 {
+      font-size: 36px;
     }
-    .usernameContainer{
-        p{
-            font-size: 17px;
-        }
+  }
+  .usernameContainer {
+    p {
+      font-size: 17px;
     }
-    .statsContainer{
-        width: 400px;
-        .statsChildren{
-            strong{
-                font-size: 26px;
-            }
-            p{
-                font-size: 13px;
-            }
-        }
+  }
+  .statsContainer {
+    width: 400px;
+    .statsChildren {
+      strong {
+        font-size: 26px;
+      }
+      p {
+        font-size: 13px;
+      }
     }
-    main{
-        .TitleContainer{
-            width: 360px;
-        }
-        .subseciton{
-            width: 360px;
-        }
-        .dividerLine{
-            width: 360px;
-        }
-        #LogOut{
-            width: 360px;
-        }
+  }
+  main {
+    .TitleContainer {
+      width: 360px;
     }
+    .subseciton {
+      width: 360px;
+    }
+    .dividerLine {
+      width: 360px;
+    }
+    #LogOut {
+      width: 360px;
+    }
+  }
 }
 
-@media (min-width: 900px){
-    .YourNameContainer{
-        h1{
-            font-size: 38px;
-        }
+@media (min-width: 900px) {
+  .YourNameContainer {
+    h1 {
+      font-size: 38px;
     }
-    .usernameContainer{
-        p{
-            font-size: 18px;
-        }
+  }
+  .usernameContainer {
+    p {
+      font-size: 18px;
     }
-    .statsContainer{
-        width: 440px;
-        .statsChildren{
-            strong{
-                font-size: 28px;
-            }
-            p{
-                font-size: 14px;
-            }
-        }
+  }
+  .statsContainer {
+    width: 440px;
+    .statsChildren {
+      strong {
+        font-size: 28px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
-    main{
-        .TitleContainer{
-            width: 400px;
-            h2{
-                font-size: 28px;
-            }
-        }
-        .subseciton{
-            width: 400px;
-        }
-        .dividerLine{
-            width: 400px;
-        }
-        #LogOut{
-            width: 400px;
-        }
+  }
+  main {
+    .TitleContainer {
+      width: 400px;
+      h2 {
+        font-size: 28px;
+      }
     }
+    .subseciton {
+      width: 400px;
+    }
+    .dividerLine {
+      width: 400px;
+    }
+    #LogOut {
+      width: 400px;
+    }
+  }
 }
 
-@media (min-width: 1200px){
-    .YourNameContainer{
-        h1{
-            font-size: 44px;
-        }
+@media (min-width: 1200px) {
+  .YourNameContainer {
+    h1 {
+      font-size: 44px;
     }
-    .statsContainer{
-        width: 520px;
-        .statsChildren{
-            strong{
-                font-size: 32px;
-            }
-            p{
-                font-size: 15px;
-            }
-        }
+  }
+  .statsContainer {
+    width: 520px;
+    .statsChildren {
+      strong {
+        font-size: 32px;
+      }
+      p {
+        font-size: 15px;
+      }
     }
-    main{
-        .TitleContainer{
-            width: 480px;
-            h2{
-                font-size: 30px;
-            }
-        }
-        .subseciton{
-            width: 480px;
-            .leftSideContent{
-                strong{
-                    font-size: 18px;
-                }
-            }
-        }
-        .dividerLine{
-            width: 480px;
-        }
-        #LogOut{
-            width: 480px;
-        }
+  }
+  main {
+    .TitleContainer {
+      width: 480px;
+      h2 {
+        font-size: 30px;
+      }
     }
+    .subseciton {
+      width: 480px;
+      .leftSideContent {
+        strong {
+          font-size: 18px;
+        }
+      }
+    }
+    .dividerLine {
+      width: 480px;
+    }
+    #LogOut {
+      width: 480px;
+    }
+  }
 }
 
-@media (max-height: 900px){
-    body{
-        padding-bottom: 190px;
-    }
+@media (max-height: 900px) {
+  body {
+    padding-bottom: 190px;
+  }
 }

@@ -1,11 +1,11 @@
 import { saveScore } from "./Storage.js";
+import { saveGameResult } from "./account/userStorage.js";
+import { TOPICS } from "./Topics.js";
 import { loadQuestions } from "./quizData.js";
 import { startTimer, stopTimer, getTimeLeft } from "./quizTimer.js";
 const quizMain = document.querySelector(".quiz-main");
 const questionPicture = document.getElementById("question-picture");
 const questionImage = document.getElementById("question-image");
-const photoAuthor = document.getElementById("photo-author");
-const photoLicense = document.getElementById("photo-license");
 const questionCategory = document.getElementById("question-category");
 const questionTitle = document.getElementById("question-title");
 const answerList = document.getElementById("answer-list");
@@ -24,7 +24,6 @@ const resultsLink = document.getElementById("results-link");
 const CIRCLE_LENGTH = 150.8;
 const TIME_LIMIT = 120;
 const topic = new URLSearchParams(location.search).get("topic") ?? "capitals";
-const topicNames = { capitals: "Capitals", artists: "Artists", sports: "Sports" };
 let questions = [];
 let currentIndex = 0;
 let score = 0;
@@ -39,7 +38,7 @@ async function loadQuiz() {
   questionTitle.textContent = "Loading question…";
   try {
     questions = await loadQuestions(topic);
-    document.title = `${topicNames[topic]} - Quiz`;
+    document.title = `${TOPICS[topic].name} - Quiz`;
     showQuestion();
     startTimer(TIME_LIMIT, updateTimer);
   } catch {
@@ -48,7 +47,8 @@ async function loadQuiz() {
     answerList.replaceChildren();
     questionCategory.textContent = "Quiz";
     questionTitle.textContent = "Quiz unavailable";
-    feedback.textContent = "We couldn't load this quiz. Try again or choose a topic on the home page.";
+    feedback.textContent =
+      "We couldn't load this quiz. Try again or choose a topic on the home page.";
     retryButton.textContent = "Try again";
     retryButton.hidden = false;
     retryButton.disabled = false;
@@ -81,19 +81,15 @@ function showQuestion() {
   feedback.textContent = "";
   questionNumber.textContent = number;
   questionTotal.textContent = total;
-  questionCategory.textContent = `${topicNames[topic]} · Question ${number} of ${total}`;
+  questionCategory.textContent = `${TOPICS[topic].name} · Question ${number} of ${total}`;
   questionProgress.setAttribute("aria-label", `Question ${number} of ${total}`);
   progressCircle.style.strokeDasharray = `${(number / total) * CIRCLE_LENGTH} ${CIRCLE_LENGTH}`;
   questionPicture.hidden = !question.image;
   quizMain.classList.toggle("quiz-main--text-only", !question.image);
   if (question.image) {
-    const { src, alt, author, authorUrl, license, licenseUrl } = question.image;
+    const { src, alt } = question.image;
     questionImage.src = src;
     questionImage.alt = alt;
-    photoAuthor.textContent = author;
-    photoAuthor.href = authorUrl;
-    photoLicense.textContent = license;
-    photoLicense.href = licenseUrl;
   }
   questionTitle.textContent = question.question;
   answerList.replaceChildren();
@@ -176,6 +172,7 @@ function saveResult() {
   retryButton.disabled = true;
   try {
     saveScore({ topic, score, total: questions.length });
+    saveGameResult(score);
   } catch {
     questionTitle.textContent = "Quiz finished";
     feedback.textContent = `You scored ${score} out of ${questions.length}. Your result couldn't be saved. Allow browser storage, then try saving again.`;
