@@ -25,7 +25,7 @@ function showUser(user){
 const user = getCurrentUser();
 
 if(user === null){
-    window.location.href = "index.html";
+    window.location.href = "Index.html";
 }else{
     showUser(user);
     initToggles();
@@ -33,5 +33,5 @@ if(user === null){
 
 LogOut.addEventListener("click" , function(){
     clearCurrentUser();
-    window.location.href = "index.html";
+    window.location.href = "Index.html";
 })

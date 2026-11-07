@@ -72,7 +72,7 @@ SignupForm.addEventListener("submit" , async function(event){
     const { success, usernameTaken, emailTaken } = await registerUser({ username, email, password });
 
     if(success){
-        window.location.href = "index.html";
+        window.location.href = "Index.html";
     }else if(usernameTaken || emailTaken){
         if(usernameTaken){
             showError(UsernameError , "Username is already taken");

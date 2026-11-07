@@ -15,8 +15,12 @@ header{
     justify-content: center;
 }
 body{
-    font-family: "Inter", sans-serif;
+    font-family: var(--main-font);
 }
+
+button, input{
+       font-family: inherit;
+   }
 
 .logocontainer{
     width: 100%;
@@ -89,7 +93,8 @@ body{
 }
 
 .statsContainer{
-    width: 337px;
+    width: min(337px, 100% - 32px);
+    margin-inline: auto;
     height: 73px;
     background-color: var(--statsbackgroundcolor);
     border-radius: 18px;

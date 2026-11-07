@@ -4,8 +4,12 @@
 }
 
 body{
-    font-family: "Inter", sans-serif;
+    font-family: var(--main-font);
 }
+
+ button, input{
+       font-family: inherit;
+   }
 header{
     width: 100%;
     height: 273px;
@@ -16,9 +20,6 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-body{
-    font-family: "Inter", sans-serif;
 }
 
 .logocontainer{
@@ -78,7 +79,8 @@ body{
     }
 }
 .statsContainer{
-    width: 337px;
+    width: min(337px, 100% - 32px);
+    margin-inline: auto;
     height: 240px;
     background-color: var(--statsbackgroundcolor);
     border-radius: 18px;
