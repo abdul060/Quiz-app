@@ -1,19 +1,21 @@
-:root{
-    --main-font: poppins;
-}
 body{
     margin: 0;
     padding: 0;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body{
-    font-family: "Inter", sans-serif;
+    font-family: var(--main-font);
 }
+
+button, input{
+    font-family: inherit;
+}
+
 header{
     width: 100%;
     height: 273px;
@@ -25,68 +27,66 @@ header{
     align-items: center;
     justify-content: center;
 }
-body{
-    font-family: "Inter", sans-serif;
-}
 
-.logocontainer{
-    width: 100%;
-    height: 40%;
+.logocontainer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  .logofirstbackground {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: var(--logofirstbackgroundcolor);
     display: flex;
     justify-content: center;
-    .logofirstbackground{
-        width: 104px;
-        height: 104px;
-        border-radius: 50%;
-        background-color: var(--logofirstbackgroundcolor);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .logosecondbackground{
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            background: var(--logosecondbackgroundcolor);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .LogoSignature{
-                font-size: 48px;
-                font-weight: bold;
-                color: var(--logofirstbackgroundcolor);
-            }
-        }
-    }
-}
-
-.YourNameContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    h1{
-        font-size: 32px;
-        color: var(--logofirstbackgroundcolor);
-    }
-}
-.usernameContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
+    align-items: center;
+    .logosecondbackground {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--logosecondbackgroundcolor);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .LogoSignature {
+        font-size: 48px;
         font-weight: bold;
         color: var(--logofirstbackgroundcolor);
-        position: relative;
-        top: 10px;
+      }
     }
+  }
+}
+
+.YourNameContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  h1 {
+    font-size: 32px;
+    color: var(--logofirstbackgroundcolor);
+  }
+}
+.usernameContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--logofirstbackgroundcolor);
+    position: relative;
+    top: 10px;
+  }
 }
 .statsContainer{
-    width: 337px;
+    width: min(337px, 100% - 32px);
+    margin-inline: auto;
     height: 370px;
     background-color: var(--statsbackgroundcolor);
     border-radius: 18px;
@@ -97,7 +97,7 @@ body{
     align-items: center;
     position: relative;
     bottom: 30px;
-    .InputsContainer{
+        .InputsContainer{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -122,152 +122,188 @@ body{
          &:focus{
         outline: 1px solid var(--headingColor);
         outline-offset: 2px;
-        }
+      }
     }
-    }
-    button{
+    .invalidcontent {
+      display: none;
+      &.activated {
+        display: block;
         width: 90%;
-        height: 45px;
-        background: var(--lineargradientright);
-        border: none;
-        border-radius: 14px;
-        color: var(--statsbackgroundcolor);
-        font-size: 18px;
-        margin-top: 10px;
-        cursor: pointer;
+        height: 0;
+        position: relative;
+        bottom: 14px;
+        text-indent: 18%;
+        font-size: 12px;
+        line-height: 12px;
+        color: var(--invalidInput);
+        pointer-events: none;
+      }
     }
+  }
+  button {
+    width: 90%;
+    height: 45px;
+    background: var(--lineargradientright);
+    border: none;
+    border-radius: 14px;
+    color: var(--statsbackgroundcolor);
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 }
 
+.iconBackground,
+.iconBackground2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.iconBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightBlue);
+}
+.iconBackground2 {
+  background-color: var(--lightSecondHeadingColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.iconBackground , .iconBackground2{
-                width: 40px;
-                height: 40px;
-                border-radius: 8px;
-                img{
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-             .iconBackground{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: var(--lightBlue);
-            }
-            .iconBackground2{
-                background-color: var(--lightSecondHeadingColor);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-.SubContainer{
-    width: 90%;
+.SubContainer {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 0 0;
+  .RememberContainer {
+    width: 50%;
     height: auto;
     display: flex;
-    justify-content: space-between;
-    margin: 10px 0 0 0;
-    .RememberContainer{
-        width: 50%;
-        height: auto;
-        display: flex;
-        label{
-            font-size: 12px;
-            color: var(--textColor);
-            margin-left: 5px;
-        }
+    label {
+      font-size: 12px;
+      color: var(--textColor);
+      margin-left: 5px;
+      &.activated {
+        color: var(--invalidInput);
+      }
     }
+  }
 }
 
-.AccountPrompt{
-    justify-self: center;
-    color: var(--textColor);
+.AccountPrompt {
+  justify-self: center;
+  color: var(--textColor);
+  font-size: 12px;
+  font-weight: 480;
+  span {
     font-size: 12px;
-    font-weight: 480;
-    span{
-        font-size: 12px;
-        font-weight: 550;
-        color: var(--sectionSignature);
-    }
-    a{
-        text-decoration: none;
-    }
+    font-weight: 550;
+    color: var(--sectionSignature);
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
-
-
-@media (max-width: 350px){
-    .statsContainer{
-        width: 90%;
+@media (min-width: 600px) {
+  .YourNameContainer {
+    h1 {
+      font-size: 36px;
     }
-}
- 
-@media (min-width: 768px){
-    header{
-        height: 300px;
+  }
+  .usernameContainer {
+    p {
+      font-size: 17px;
     }
-    .YourNameContainer{
-        h1{
-            font-size: 40px;
-        }
-    }
-    .usernameContainer{
-        p{
-            font-size: 18px;
-        }
-    }
-    .statsContainer{
-        width: 440px;
-        .InputsContainer{
-            input{
-                font-size: 15px;
-            }
-        }
- 
-    }
-    .AccountPrompt{
+  }
+  .statsContainer {
+    width: 400px;
+    .InputsContainer {
+      input {
         font-size: 14px;
-        span{
-            font-size: 14px;
-        }
+      }
     }
+  }
+  .AccountPrompt {
+    font-size: 13px;
+    span {
+      font-size: 13px;
+    }
+  }
 }
- 
-@media (min-width: 1024px){
-    header{
-        height: 320px;
+
+@media (min-width: 900px) {
+  header {
+    height: 300px;
+  }
+  .YourNameContainer {
+    h1 {
+      font-size: 40px;
     }
-    .YourNameContainer{
-        h1{
-            font-size: 44px;
-        }
+  }
+  .usernameContainer {
+    p {
+      font-size: 18px;
     }
-    .usernameContainer{
-        p{
-            font-size: 20px;
-        }
+  }
+  .statsContainer {
+    width: 440px;
+    .InputsContainer {
+      input {
+        font-size: 15px;
+      }
     }
-    .statsContainer{
-        width: 520px;
-        .InputsContainer{
-            input{
-                font-size: 16px;
-            }
-        }
-        button{
-            font-size: 20px;
-        }
+  }
+  .AccountPrompt {
+    font-size: 14px;
+    span {
+      font-size: 14px;
     }
-    .AccountPrompt{
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 320px;
+  }
+  .YourNameContainer {
+    h1 {
+      font-size: 44px;
+    }
+  }
+  .usernameContainer {
+    p {
+      font-size: 20px;
+    }
+  }
+  .statsContainer {
+    width: 520px;
+    .InputsContainer {
+      input {
         font-size: 16px;
-        span{
-            font-size: 16px;
-        }
+      }
     }
+    button {
+      font-size: 20px;
+    }
+  }
+  .AccountPrompt {
+    font-size: 16px;
+    span {
+      font-size: 16px;
+    }
+  }
 }
- 
-@media (max-height: 900px){
-    body{
-        padding-bottom: 120px;
-    }
+
+@media (max-height: 900px) {
+  body {
+    padding-bottom: 120px;
+  }
 }
