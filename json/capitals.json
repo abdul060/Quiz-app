@@ -3,7 +3,7 @@
   "difficulty": "easy",
   "questions": [
     {
-      "id": 1,
+      "id": "capitals-01",
       "question": "Which capital city is this?",
       "image": {
         "src": "../assets/questions/stockholm.jpg",
@@ -27,11 +27,10 @@
           "text": "Oslo"
         }
       ],
-      "correctAnswerId": "stockholm",
-      "topic": "capitals"
+      "correctAnswerId": "stockholm"
     },
     {
-      "id": 2,
+      "id": "capitals-02",
       "question": "Which capital city is this?",
       "image": {
         "src": "../assets/questions/amsterdam.jpg",
@@ -55,11 +54,10 @@
           "text": "Vienna"
         }
       ],
-      "correctAnswerId": "amsterdam",
-      "topic": "capitals"
+      "correctAnswerId": "amsterdam"
     },
     {
-      "id": 3,
+      "id": "capitals-03",
       "question": "Which capital city is this?",
       "image": {
         "src": "../assets/questions/london.jpg",
@@ -83,11 +81,10 @@
           "text": "London"
         }
       ],
-      "correctAnswerId": "london",
-      "topic": "capitals"
+      "correctAnswerId": "london"
     },
     {
-      "id": 4,
+      "id": "capitals-04",
       "question": "Which capital city is this?",
       "image": {
         "src": "../assets/questions/rome.jpg",
@@ -111,11 +108,10 @@
           "text": "Madrid"
         }
       ],
-      "correctAnswerId": "rome",
-      "topic": "capitals"
+      "correctAnswerId": "rome"
     },
     {
-      "id": 5,
+      "id": "capitals-05",
       "question": "Which capital city is this?",
       "image": {
         "src": "../assets/questions/berlin.jpg",
@@ -139,8 +135,7 @@
           "text": "Warsaw"
         }
       ],
-      "correctAnswerId": "berlin",
-      "topic": "capitals"
+      "correctAnswerId": "berlin"
     }
   ]
 }

@@ -1,11 +1,4 @@
 # Quiz-app
-<<<<<<< HEAD
-
-## Questions view
-
-Open `pages/questions.html` with VS Code Live Server to preview Samuel's Questions view. This contribution contains HTML, CSS, 15 questions in JSON and five local photos. JavaScript gameplay is not connected yet.
-
-See [Questions documentation](docs/questions.md) for the data model, responsive layout, JavaScript handoff and AI-assistance disclosure. [Photo credits](pages/question-credits.html) includes source links and licences.
 
 Quiz app
 A quiz app built with vanilla JavaScript, HTML and CSS. Users choose a topic, answer questions within a time limit and see their results.
@@ -26,9 +19,9 @@ Andrija Dokic
 andrijadjokic07-png
 Profile, login, signup
 
-Samuel Gezai
+Samuel Goitom Gezai
 SamuelGoitomGezai
-Questions
+Questions page, timer, question data and photo credits
 
 Abdul Rahman Al Hanbili
 abdul060
@@ -36,7 +29,7 @@ Scoreboard, footer, main.css
 
 Gogita Nikabadze
 teddyyGO
-Leaderboard
+Leaderboard, Scoreboard JavaScript
 
 
 How the app works:
@@ -67,7 +60,7 @@ Data model
   "difficulty": "easy",
   "questions": [
     {
-      "id": 1,
+      "id": "capitals-01",
       "question": "Which capital city is this?",
       "image": {
         "src": "../assets/questions/stockholm.jpg",
@@ -82,8 +75,7 @@ Data model
         { "id": "copenhagen", "text": "Copenhagen" },
         { "id": "oslo", "text": "Oslo" }
       ],
-      "correctAnswerId": "stockholm",
-      "topic": "capitals"
+      "correctAnswerId": "stockholm"
     }
   ]
 }
@@ -110,11 +102,8 @@ Andrija Dokic: I used AI for the assistance of giving me suggestions on how to a
 
 Andrija Dokic
 
-Samuel Gezai
+Samuel Goitom Gezai: I used AI to help me build the Questions page, for example with parts of the HTML and CSS, turning our questions into JSON, finding photos with free licences and fixing bugs. I always read through the code so I understood it, and I wrote and changed parts of it myself. After every change I played through the quiz to see that it worked.
 
 Abdul Rahman Al Hanbali 
 
 Gogita Nikabadze
-
-=======
->>>>>>> 2bee179c1224804e210e46bd3c710aa9abdb8343

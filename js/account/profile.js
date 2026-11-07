@@ -24,14 +24,14 @@ function showUser(user) {
 
 const user = getCurrentUser();
 
-if (user === null) {
-  window.location.href = "index.html";
-} else {
-  showUser(user);
-  initToggles();
+if(user === null){
+    window.location.href = "Index.html";
+}else{
+    showUser(user);
+    initToggles();
 }
 
-LogOut.addEventListener("click", function () {
-  clearCurrentUser();
-  window.location.href = "index.html";
-});
+LogOut.addEventListener("click" , function(){
+    clearCurrentUser();
+    window.location.href = "Index.html";
+})

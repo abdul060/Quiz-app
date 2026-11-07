@@ -75,16 +75,16 @@ SignupForm.addEventListener("submit", async function (event) {
     password,
   });
 
-  if (success) {
-    window.location.href = "index.html";
-  } else if (usernameTaken || emailTaken) {
-    if (usernameTaken) {
-      showError(UsernameError, "Username is already taken");
+    if(success){
+        window.location.href = "Index.html";
+    }else if(usernameTaken || emailTaken){
+        if(usernameTaken){
+            showError(UsernameError , "Username is already taken");
+        }
+        if(emailTaken){
+            showError(EmailError , "Email is already registered");
+        }
+    }else{
+        showError(UsernameError , "Could not save your data");
     }
-    if (emailTaken) {
-      showError(EmailError, "Email is already registered");
-    }
-  } else {
-    showError(UsernameError, "Could not save your data");
-  }
-});
+})
