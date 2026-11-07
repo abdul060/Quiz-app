@@ -27,7 +27,7 @@ Abdul Rahman Al Hanbili
 abdul060
 Scoreboard, footer, main.css
 
-Gogita Nikabadze
+George
 teddyyGO
 Leaderboard, Scoreboard JavaScript
 
@@ -106,4 +106,4 @@ Samuel Goitom Gezai: I used AI to help me build the Questions page, for example 
 
 Abdul Rahman Al Hanbali 
 
-Gogita Nikabadze
+George
