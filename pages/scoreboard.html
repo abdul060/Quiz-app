@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/css/scoreboard.css">
+    <link rel="stylesheet" href="../css/scoreboard.css">
     <link rel="stylesheet" href="../css/main.css">
     
     <title>Scoreboard - Quiz App</title>
@@ -36,9 +36,10 @@
             <div class="latest_score">4/5</div>
         </section>
 
-      <h2 class="visually-hidden">Your best rounds</h2>
-
-
+      <section class="best" id="best-rounds" aria-labelledby="best-title" hidden>
+  <h2 id="best-title" class="best_title">Your best rounds</h2>
+  <ol class="score_list"></ol>
+</section>
 
         <a href="home.html" class="btn_primary">Play again</a>
     </main>
