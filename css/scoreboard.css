@@ -183,3 +183,68 @@ body {
 .visually-hidden {
   margin: 0 28px 28px;
 }
+
+/* tablet */
+@media (min-width: 600px) {
+  .latest {
+    padding: 28px 32px;
+  }
+  .latest_message {
+    font-size: 26px;
+  }
+  .latest_score {
+    width: 92px;
+    height: 92px;
+    font-size: 28px;
+  }
+}
+
+/* laptop */
+@media (min-width: 900px) {
+  .scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto 1fr;
+    column-gap: 20px;
+  }
+  .scoreboard_header,
+  .tabs {
+    grid-column: 1 / -1;
+  }
+  .latest {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+    align-self: start;
+  }
+  #best-title {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .score_list {
+    grid-column: 2;
+    grid-row: 4 / span 2;
+    margin-top: 0;
+  }
+  .btn_primary {
+    grid-column: 1;
+    grid-row: 5;
+    align-self: start;
+    margin: 0 28px;
+  }
+}
+
+/* big screen */
+@media (min-width: 1200px) {
+  .latest {
+    padding: 40px;
+  }
+  .latest_message {
+    font-size: 30px;
+  }
+  .score_list {
+    gap: 22px;
+  }
+  .score-item_category {
+    font-size: 18px;
+  }
+}

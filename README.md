@@ -29,7 +29,7 @@ Scoreboard, footer, main.css
 
 Gogita Nikabadze
 teddyyGO
-Leaderboard
+Leaderboard, Scoreboard JavaScript
 
 
 How the app works:
