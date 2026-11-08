@@ -3,7 +3,7 @@
 Quiz app
 A quiz app built with vanilla JavaScript, HTML and CSS. Users choose a topic, answer questions within a time limit and see their results.
 
-Live app: [https://bucolic-heliotrope-3cc57f.netlify.app]
+Live app: [https://stately-fudge-b77eb0.netlify.app/]
 
 Team
 
@@ -100,12 +100,7 @@ Emma Hagelin: Used AI to generate images based on our sketches. I compared the g
 
 Andrija Dokic: I used AI for the assistance of giving me suggestions on how to approach making different modules and the whole profile system. LocalStorage() and import were new terms for me and other ones like try & catch were still new for me so I had problems writing the whole thing on my own. 
 
-Andrija Dokic
-
 Samuel Goitom Gezai: I used AI to help me build the Questions page, for example with parts of the HTML and CSS, turning our questions into JSON, finding photos with free licences and fixing bugs. I always read through the code so I understood it, and I wrote and changed parts of it myself. After every change I played through the quiz to see that it worked.
 
-Abdul Rahman Al Hanbali
+Abdul Rahman Al Hanbali: I used Claude as a helper to find where my errors were, to understand what went wrong and how to improve it. I asked for help with why the home page did not show its CSS, with the responsive layout of the scoreboard page, and with the media queries at 600, 900 and 1200 px so that the page looks similar to the leaderboard page. Claude suggested the CSS code and explained it, and I tested the result myself in the browser, checked the console for errors and checked the keyboard focus when tabbing through the page.
 
-I used Claude as a helper to find where my errors were, to understand what went wrong and how to improve it. I asked for help with why the home page did not show its CSS, with the responsive layout of the scoreboard page, and with the media queries at 600, 900 and 1200 px so that the page looks similar to the leaderboard page. Claude suggested the CSS code and explained it, and I tested the result myself in the browser, checked the console for errors and checked the keyboard focus when tabbing through the page.
-
-George
