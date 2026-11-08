@@ -1,20 +1,15 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet" />
-    <link
-      rel="icon"
-      href="../assets/questions/quiz-icon.svg"
-      type="image/svg+xml" />
-    <link rel="stylesheet" href="../css/scoreboard.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/questions/quiz-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/scoreboard.css">
+    <link rel="stylesheet" href="../css/main.css">
+    
     <title>Scoreboard - Quiz App</title>
   </head>
   <body>
@@ -32,18 +27,21 @@
           >My scores</a
         >
         <a href="leaderboard.html" class="tabs_btn">Leaderboard</a>
-      </nav>
+        </nav>
 
-      <section class="latest">
-        <div class="latest_text">
-          <p class="latest_label">No rounds yet</p>
-          <h2 class="latest_message">Play your first quiz!</h2>
-        </div>
-        <div class="latest_score">-</div>
-      </section>
 
-      <h2 id="best-title" class="visually-hidden">Your best rounds</h2>
-      <ol class="score_list"></ol>
+        <section class="latest">
+            <div class="latest_text">
+                <p class="latest_label">Latest round · Capitals</p>
+                <h2 class="latest_message">Great job!</h2>
+            </div>
+            <div class="latest_score">4/5</div>
+        </section>
+
+      <section class="best" id="best-rounds" aria-labelledby="best-title" hidden>
+  <h2 id="best-title" class="best_title">Your best rounds</h2>
+  <ol class="score_list"></ol>
+</section>
 
       <a href="home.html" class="btn_primary">Play again</a>
     </main>
