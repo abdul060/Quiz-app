@@ -248,3 +248,197 @@ body {
     font-size: 18px;
   }
 }
+
+.score-item_info{
+    flex: 1; 
+}
+
+.score-item_category{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1B1D2A;
+}
+
+.score-item_date{
+    font-size: 13px;
+    color: #6B7080;
+}
+
+.score-item_badge{
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #E7ECFF;
+    color: #3B5BDB;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn_primary{
+    text-decoration: none;
+    min-height: 54px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #D6336C 0%, #C4480A 100%);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 22px 0;
+}
+.best[hidden] { 
+    display: none; 
+}
+
+.best_title {
+    margin: 0 28px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B1D2A;
+}
+
+
+
+@media (min-width: 600px){
+    .latest{
+        margin: 0 28px 32px;
+        padding: 24px 28px;
+    }
+    .latest_message{
+        font-size: 26px;
+    }
+    .latest_score{
+        width: 88px;
+        height: 88px;
+        font-size: 28px;
+    }
+    .best_title{
+        margin: 0 28px;
+        font-size: 20px;
+    }
+    .score_list{
+        margin: 24px 28px 0;
+        gap: 18px;
+    }
+    .score-item_avatar{
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+    }
+    .score-item_category{
+        font-size: 17px;
+    }
+    .btn_primary{
+        margin: 32px 28px 0;
+    }
+}
+
+@media (min-width: 900px){
+    .scoreboard{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "tabs tabs"
+            "latest best"
+            "play best";
+        grid-template-rows: auto auto auto 1fr;
+        column-gap: 20px;
+        align-content: start;
+        align-items: start;
+    }
+    .scoreboard_header{
+        grid-area: header;
+    }
+    .tabs{
+        grid-area: tabs;
+    }
+    .latest{
+        grid-area: latest;
+        margin: 0 0 24px 28px;
+        padding: 36px;
+        border-radius: 32px;
+    }
+    .latest_label{
+        font-size: 16px;
+    }
+    .latest_message{
+        font-size: 32px;
+    }
+    .latest_score{
+        width: 112px;
+        height: 112px;
+        font-size: 36px;
+    }
+    .btn_primary{
+        grid-area: play;
+        margin: 0 0 0 28px;
+        min-height: 68px;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+    .best{
+        grid-area: best;
+    }
+    .best_title{
+        margin: 0 28px 0 0;
+    }
+    .score_list{
+        margin: 20px 28px 0 0;
+    }
+    .scoreboard:has(.best[hidden]){
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "tabs"
+            "latest"
+            "play";
+        grid-template-rows: auto auto auto auto;
+    }
+    .scoreboard:has(.best[hidden]) .latest{
+        margin: 0 28px 24px;
+    }
+    .scoreboard:has(.best[hidden]) .btn_primary{
+        margin: 0 28px;
+    }
+}
+
+@media (min-width: 1200px){
+    .latest{
+        padding: 44px 48px;
+        border-radius: 36px;
+    }
+    .latest_label{
+        font-size: 18px;
+    }
+    .latest_message{
+        font-size: 40px;
+    }
+    .latest_score{
+        width: 136px;
+        height: 136px;
+        font-size: 44px;
+    }
+    .btn_primary{
+        min-height: 76px;
+        border-radius: 22px;
+        font-size: 22px;
+    }
+    .score_list{
+        gap: 20px;
+    }
+    .score-item_avatar{
+        width: 60px;
+        height: 60px;
+    }
+    .score-item_category{
+        font-size: 18px;
+    }
+    .score-item_date{
+        font-size: 14px;
+    }
+    .score-item_badge{
+        padding: 8px 18px;
+        font-size: 16px;
+    }
+}
